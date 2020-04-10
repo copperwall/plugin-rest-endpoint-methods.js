@@ -5198,10 +5198,10 @@ export type RestEndpointMethods = {
     compareCommits: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/compare/:base...:head"][0]
+          Endpoints["GET /repos/:owner/:repo/compare/:base...{head}"][0]
       ): Promise<
         OctokitResponse<
-          Endpoints["GET /repos/:owner/:repo/compare/:base...:head"][2]
+          Endpoints["GET /repos/:owner/:repo/compare/:base...{head}"][2]
         >
       >;
 
@@ -7272,10 +7272,10 @@ export type RestEndpointMethods = {
     uploadReleaseAsset: {
       (
         params?: RequestParameters &
-          Endpoints["POST :origin/repos/:owner/:repo/releases/:release_id/assets{?name,label}"][0]
+          Endpoints["POST /repos/:owner/:repo/releases/:release_id/assets{?name,label}"][0]
       ): Promise<
         OctokitResponse<
-          Endpoints["POST :origin/repos/:owner/:repo/releases/:release_id/assets{?name,label}"][2]
+          Endpoints["POST /repos/:owner/:repo/releases/:release_id/assets{?name,label}"][2]
         >
       >;
 

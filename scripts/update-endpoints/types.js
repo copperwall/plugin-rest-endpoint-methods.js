@@ -106,7 +106,12 @@ async function getRoutes() {
     }
 
     const idName = endpoint.id;
-    const url = endpoint.url.toLowerCase().replace(/\{(\w+)\}/g, ":$1");
+    const url = endpoint.url
+      .toLowerCase()
+      // replace {param} with :param
+      .replace(/\/\{([^}]+)}/g, "/:$1")
+      // stecial case for "Upload a release asset": remove ":origin" prefix
+      .replace(/^\{origin\}/, "");
 
     // new route
     newRoutes[scope][idName] = {
