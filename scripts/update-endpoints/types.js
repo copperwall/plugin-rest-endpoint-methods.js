@@ -14,7 +14,7 @@ const { isDeprecated } = require("./util");
 
 const typeMap = {
   integer: "number",
-  "integer[]": "number[]"
+  "integer[]": "number[]",
 };
 
 function parameterize(definition) {
@@ -36,7 +36,7 @@ function parameterize(definition) {
     alias: definition.alias,
     deprecated: definition.deprecated,
     allowNull: definition.allowNull,
-    jsdoc: stringToJsdocComment(definition.description)
+    jsdoc: stringToJsdocComment(definition.description),
   };
 }
 
@@ -63,11 +63,11 @@ function toDeprecated(params, deprecated) {
   const deprecatedParam = Object.assign({}, deprecated.newParam, {
     key: deprecated.name,
     name: pascalcase(deprecated.name),
-    jsdoc: deprecated.jsdoc
+    jsdoc: deprecated.jsdoc,
   });
 
   return params
-    .filter(param => param.key !== deprecated.newParam.name)
+    .filter((param) => param.key !== deprecated.newParam.name)
     .concat(deprecatedParam)
     .sort((a, b) => {
       if (a.key > b.key) {
@@ -98,14 +98,14 @@ async function generateTypes() {
         let responseType = "AnyResponse";
         if (entry.responses) {
           const typeName = typeWriter.add(entry.responses, {
-            rootTypeName: pascalcase(`${namespace}.${methodName}.Response`)
+            rootTypeName: pascalcase(`${namespace}.${methodName}.Response`),
           });
           responseType = "OctokitResponse<" + typeName + ">";
         }
 
         // find aliased required parameters
         const deprecatedParameters = Object.keys(entry.params)
-          .map(name => {
+          .map((name) => {
             const param = entry.params[name];
             if (!param.deprecated) {
               return;
@@ -114,11 +114,11 @@ async function generateTypes() {
             const newParamName = entry.params[name].alias;
             const newParam = Object.assign(
               {
-                type: entry.params[name].type
+                type: entry.params[name].type,
               },
               entry.params[newParamName],
               {
-                name: newParamName
+                name: newParamName,
               }
             );
 
@@ -126,7 +126,7 @@ async function generateTypes() {
               param.description,
               newParamName
                 ? `@deprecated "${name}" parameter renamed to "${newParamName}"`
-                : `@deprecated "${name}" parameter has been deprecated and will be removed in future`
+                : `@deprecated "${name}" parameter has been deprecated and will be removed in future`,
             ]
               .filter(Boolean)
               .join("\n");
@@ -135,20 +135,20 @@ async function generateTypes() {
               newParam:
                 newParam &&
                 Object.assign({}, newParam, {
-                  type: typeMap[newParam.type] || newParam.type
+                  type: typeMap[newParam.type] || newParam.type,
                 }),
               name,
-              jsdoc: stringToJsdocComment(description)
+              jsdoc: stringToJsdocComment(description),
             };
           })
           .filter(Boolean);
 
         const params = Object.keys(entry.params)
-          .map(name => Object.assign({ name }, entry.params[name]))
+          .map((name) => Object.assign({ name }, entry.params[name]))
           .reduce(toCombineParams, [])
           .map(toParamAlias)
           // handle "object" & "object[]" types
-          .map(param => {
+          .map((param) => {
             if (param.deprecated) {
               return;
             }
@@ -187,32 +187,33 @@ async function generateTypes() {
           {
             type: hasParams ? namespacedParamsName : "EmptyParams",
             params,
-            hasParams
-          }
+            hasParams,
+          },
         ];
 
-        deprecatedParameters.forEach(param => {
+        deprecatedParameters.forEach((param) => {
           paramTypes.unshift({
             type: pascalcase(
               `${namespacedParamsName}.deprecated.${param.name}`
             ),
             params: toDeprecated(params, param),
-            hasParams: true
+            hasParams: true,
           });
         });
 
         const description = [
           entry.description,
-          entry.deprecated && `@deprecated ${entry.deprecated}`
+          entry.deprecated && `@deprecated ${entry.deprecated}`,
         ]
           .filter(Boolean)
           .join("\n");
 
         return methods.concat({
           method: methodName,
+          route: `${entry.method} ${entry.url}`,
           responseType,
           jsdoc: stringToJsdocComment(description),
-          paramTypes
+          paramTypes,
         });
       },
       []
@@ -220,7 +221,7 @@ async function generateTypes() {
 
     return namespaces.concat({
       namespace: camelCase(namespace),
-      methods
+      methods,
     });
   }, []);
 
@@ -231,7 +232,7 @@ async function generateTypes() {
     for (const method of namespace.methods) {
       for (const paramType of method.paramTypes) {
         if (!paramType.hasParams) continue;
-        const params = paramType.params.map(param => {
+        const params = paramType.params.map((param) => {
           const required = param.required ? "" : "?";
           const allowNull = param.allowNull ? " | null" : "";
           const key = /-/.test(param.key) ? `"${param.key}"` : param.key;
@@ -249,7 +250,7 @@ async function generateTypes() {
   paramTypes.push("\n// child param types");
 
   for (const [name, paramsMap] of Object.entries(childParams)) {
-    const params = Object.values(paramsMap).map(param => {
+    const params = Object.values(paramsMap).map((param) => {
       const required = param.required ? "" : "?";
       const allowNull = param.allowNull ? " | null" : "";
       const key = /-/.test(param.key) ? `"${param.key}"` : param.key;
@@ -266,17 +267,14 @@ async function generateTypes() {
   for (const namespace of namespaces) {
     const namespaceMethods = [];
     for (const method of namespace.methods) {
-      const params = method.paramTypes.map(({ type }) => {
-        return `(params?: RequestParameters & ${type}): Promise<${method.responseType}>;`;
-      });
       namespaceMethods.push(
         [
           method.jsdoc,
           `${method.method}: {
-          ${params.join("\n")}          
+          (params?: RequestParameters & Endpoints["${method.route}"][0]): Promise<OctokitResponse<Endpoints["${method.route}"][2]>>
 
           endpoint: EndpointInterface;
-        }`
+        }`,
         ].join("\n")
       );
     }
@@ -290,22 +288,19 @@ async function generateTypes() {
     [
       `import {
   EndpointInterface,
+  Endpoints,
   RequestParameters,
   OctokitResponse
 } from "@octokit/types";
 
 type AnyResponse = OctokitResponse<any>;
 type EmptyParams = {};`,
-      "\n// response types",
-      responseTypes,
-      "\n// param types",
-      paramTypes.join("\n"),
       `\n\nexport type RestEndpointMethods = {
         ${RestEndpointNamespaces.join("\n")}
-      }`
+      }`,
     ].join("\n"),
     {
-      parser: "typescript"
+      parser: "typescript",
     }
   );
 
@@ -323,7 +318,7 @@ type EmptyParams = {};`,
 async function getRoutes() {
   const newRoutes = {};
 
-  ENDPOINTS.forEach(endpoint => {
+  ENDPOINTS.forEach((endpoint) => {
     if (isDeprecated(endpoint)) return;
 
     const scope = endpoint.scope;
@@ -355,7 +350,7 @@ async function getRoutes() {
           description:
             param.description === `${param.name} parameter`
               ? ""
-              : param.description
+              : param.description,
         };
         if (param.allowNull) {
           result[param.name].allowNull = true;
@@ -394,14 +389,14 @@ async function getRoutes() {
       }, {}),
       responses:
         endpoint.responses.length && endpoint.responses[0].examples
-          ? endpoint.responses[0].examples.map(example =>
+          ? endpoint.responses[0].examples.map((example) =>
               JSON.parse(example.data)
             )
-          : undefined
+          : undefined,
     };
 
     // add required headers as parameters
-    const requiredHeaders = endpoint.headers.filter(header => {
+    const requiredHeaders = endpoint.headers.filter((header) => {
       // if value is set, we pass the header with its expected value automatically
       if (header.value) {
         return false;
@@ -413,7 +408,7 @@ async function getRoutes() {
     if (requiredHeaders.length) {
       newRoutes[scope][idName].params.headers = {
         type: "object",
-        required: true
+        required: true,
       };
       for (const header of requiredHeaders) {
         // Content-Length header is set automatically
@@ -423,7 +418,7 @@ async function getRoutes() {
 
         newRoutes[scope][idName].params[`headers.${header.name}`] = {
           type: "string",
-          required: true
+          required: true,
         };
       }
     }
