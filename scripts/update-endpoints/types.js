@@ -27,8 +27,9 @@ async function generateTypes() {
           .join("\n");
 
         return methods.concat({
-          method: methodName,
+          name: methodName,
           route: `${entry.method} ${entry.url}`,
+          hasRequiredPreviews: entry.hasRequiredPreviews,
           jsdoc: stringToJsdocComment(description),
         });
       },
@@ -45,11 +46,14 @@ async function generateTypes() {
   for (const namespace of namespaces) {
     const namespaceMethods = [];
     for (const method of namespace.methods) {
+      const overrideRequiredPreviews = method.hasRequiredPreviews
+        ? `& { mediaType: { previews: string[] } }`
+        : "";
       namespaceMethods.push(
         [
           method.jsdoc,
-          `${method.method}: {
-          (params?: RequestParameters & Endpoints["${method.route}"][0]): Promise<OctokitResponse<Endpoints["${method.route}"][2]>>
+          `${method.name}: {
+          (params?: RequestParameters & Omit<Endpoints["${method.route}"][0], "baseUrl" | "headers"> ${overrideRequiredPreviews}): Promise<OctokitResponse<Endpoints["${method.route}"][2]>>
 
           endpoint: EndpointInterface;
         }`,
@@ -118,6 +122,7 @@ async function getRoutes() {
       method: endpoint.method,
       url,
       description: endpoint.description,
+      hasRequiredPreviews: !!endpoint.previews.length,
       deprecated: newRoutes[scope][idName]
         ? newRoutes[scope][idName].deprecated
         : undefined,

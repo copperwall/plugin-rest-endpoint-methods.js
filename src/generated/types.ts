@@ -16,7 +16,10 @@ export type RestEndpointMethods = {
     cancelWorkflowRun: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/actions/runs/:run_id/cancel"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/actions/runs/:run_id/cancel"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/actions/runs/:run_id/cancel"][2]
@@ -45,7 +48,10 @@ export type RestEndpointMethods = {
     createOrUpdateSecretForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/actions/secrets/:name"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/actions/secrets/:name"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/actions/secrets/:name"][2]
@@ -62,7 +68,10 @@ export type RestEndpointMethods = {
     createRegistrationToken: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/actions/runners/registration-token"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/actions/runners/registration-token"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/actions/runners/registration-token"][2]
@@ -79,7 +88,10 @@ export type RestEndpointMethods = {
     createRemoveToken: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/actions/runners/remove-token"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/actions/runners/remove-token"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/actions/runners/remove-token"][2]
@@ -94,7 +106,10 @@ export type RestEndpointMethods = {
     deleteArtifact: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id"][2]
@@ -109,7 +124,10 @@ export type RestEndpointMethods = {
     deleteSecretFromRepo: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/actions/secrets/:name"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/actions/secrets/:name"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/actions/secrets/:name"][2]
@@ -126,7 +144,10 @@ export type RestEndpointMethods = {
     downloadArtifact: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/artifacts/:artifact_id/:archive_format"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/artifacts/:artifact_id/:archive_format"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/artifacts/:artifact_id/:archive_format"][2]
@@ -141,7 +162,10 @@ export type RestEndpointMethods = {
     getArtifact: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/artifacts/:artifact_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/artifacts/:artifact_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/artifacts/:artifact_id"][2]
@@ -156,7 +180,10 @@ export type RestEndpointMethods = {
     getPublicKey: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/secrets/public-key"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/secrets/public-key"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/secrets/public-key"][2]
@@ -171,7 +198,10 @@ export type RestEndpointMethods = {
     getSecret: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/secrets/:name"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/secrets/:name"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/secrets/:name"][2]
@@ -186,7 +216,10 @@ export type RestEndpointMethods = {
     getSelfHostedRunner: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/runners/:runner_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/runners/:runner_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/runners/:runner_id"][2]
@@ -201,7 +234,10 @@ export type RestEndpointMethods = {
     getWorkflow: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/workflows/:workflow_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/workflows/:workflow_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/workflows/:workflow_id"][2]
@@ -216,7 +252,10 @@ export type RestEndpointMethods = {
     getWorkflowJob: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/jobs/:job_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/jobs/:job_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/jobs/:job_id"][2]
@@ -231,7 +270,10 @@ export type RestEndpointMethods = {
     getWorkflowRun: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id"][2]
@@ -246,7 +288,10 @@ export type RestEndpointMethods = {
     listArtifactsForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/artifacts"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/artifacts"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/artifacts"][2]
@@ -261,7 +306,10 @@ export type RestEndpointMethods = {
     listDownloadsForSelfHostedRunnerApplication: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/runners/downloads"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/runners/downloads"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/runners/downloads"][2]
@@ -276,7 +324,10 @@ export type RestEndpointMethods = {
     listJobsForWorkflowRun: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/jobs"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/jobs"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/jobs"][2]
@@ -293,7 +344,10 @@ export type RestEndpointMethods = {
     listRepoWorkflowRuns: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/runs"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/runs"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/actions/runs"][2]>
       >;
@@ -306,7 +360,10 @@ export type RestEndpointMethods = {
     listRepoWorkflows: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/workflows"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/workflows"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/workflows"][2]
@@ -321,7 +378,10 @@ export type RestEndpointMethods = {
     listSecretsForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/secrets"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/secrets"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/actions/secrets"][2]>
       >;
@@ -334,7 +394,10 @@ export type RestEndpointMethods = {
     listSelfHostedRunnersForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/runners"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/runners"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/actions/runners"][2]>
       >;
@@ -349,7 +412,10 @@ export type RestEndpointMethods = {
     listWorkflowJobLogs: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/jobs/:job_id/logs"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/jobs/:job_id/logs"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/jobs/:job_id/logs"][2]
@@ -364,7 +430,10 @@ export type RestEndpointMethods = {
     listWorkflowRunArtifacts: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/artifacts"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/artifacts"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/artifacts"][2]
@@ -381,7 +450,10 @@ export type RestEndpointMethods = {
     listWorkflowRunLogs: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/logs"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/logs"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/logs"][2]
@@ -398,7 +470,10 @@ export type RestEndpointMethods = {
     listWorkflowRuns: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs"][2]
@@ -413,7 +488,10 @@ export type RestEndpointMethods = {
     reRunWorkflow: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/actions/runs/:run_id/rerun"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/actions/runs/:run_id/rerun"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/actions/runs/:run_id/rerun"][2]
@@ -428,7 +506,10 @@ export type RestEndpointMethods = {
     removeSelfHostedRunner: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/actions/runners/:runner_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/actions/runners/:runner_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/actions/runners/:runner_id"][2]
@@ -442,7 +523,10 @@ export type RestEndpointMethods = {
     checkRepoIsStarredByAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/starred/:owner/:repo"][0]
+          Omit<
+            Endpoints["GET /user/starred/:owner/:repo"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /user/starred/:owner/:repo"][2]>
       >;
@@ -455,7 +539,10 @@ export type RestEndpointMethods = {
     checkStarringRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/starred/:owner/:repo"][0]
+          Omit<
+            Endpoints["GET /user/starred/:owner/:repo"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /user/starred/:owner/:repo"][2]>
       >;
@@ -468,7 +555,10 @@ export type RestEndpointMethods = {
     deleteRepoSubscription: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/subscription"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/subscription"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /repos/:owner/:repo/subscription"][2]>
       >;
@@ -481,7 +571,10 @@ export type RestEndpointMethods = {
     deleteThreadSubscription: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /notifications/threads/:thread_id/subscription"][0]
+          Omit<
+            Endpoints["DELETE /notifications/threads/:thread_id/subscription"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /notifications/threads/:thread_id/subscription"][2]
@@ -504,9 +597,10 @@ export type RestEndpointMethods = {
      * **Note**: Private feeds are only returned when [authenticating via Basic Auth](https://developer.github.com/v3/#basic-authentication) since current feed URIs use the older, non revocable auth tokens.
      */
     getFeeds: {
-      (params?: RequestParameters & Endpoints["GET /feeds"][0]): Promise<
-        OctokitResponse<Endpoints["GET /feeds"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /feeds"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /feeds"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -514,7 +608,10 @@ export type RestEndpointMethods = {
     getRepoSubscription: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/subscription"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/subscription"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/subscription"][2]>
       >;
@@ -525,7 +622,10 @@ export type RestEndpointMethods = {
     getThread: {
       (
         params?: RequestParameters &
-          Endpoints["GET /notifications/threads/:thread_id"][0]
+          Omit<
+            Endpoints["GET /notifications/threads/:thread_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /notifications/threads/:thread_id"][2]>
       >;
@@ -538,7 +638,8 @@ export type RestEndpointMethods = {
      */
     getThreadSubscription: {
       (
-        params?: RequestParameters & Endpoints["PUT /notifications"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["PUT /notifications"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["PUT /notifications"][2]>>;
 
       endpoint: EndpointInterface;
@@ -551,7 +652,10 @@ export type RestEndpointMethods = {
     getThreadSubscriptionForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /notifications/threads/:thread_id/subscription"][0]
+          Omit<
+            Endpoints["GET /notifications/threads/:thread_id/subscription"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /notifications/threads/:thread_id/subscription"][2]
@@ -565,7 +669,11 @@ export type RestEndpointMethods = {
      */
     listEventsForAuthenticatedUser: {
       (
-        params?: RequestParameters & Endpoints["GET /users/:username/events"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /users/:username/events"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /users/:username/events"][2]>>;
 
       endpoint: EndpointInterface;
@@ -577,7 +685,10 @@ export type RestEndpointMethods = {
     listEventsForOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/events/orgs/:org"][0]
+          Omit<
+            Endpoints["GET /users/:username/events/orgs/:org"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/events/orgs/:org"][2]>
       >;
@@ -590,7 +701,11 @@ export type RestEndpointMethods = {
      */
     listEventsForUser: {
       (
-        params?: RequestParameters & Endpoints["GET /users/:username/events"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /users/:username/events"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /users/:username/events"][2]>>;
 
       endpoint: EndpointInterface;
@@ -610,9 +725,10 @@ export type RestEndpointMethods = {
      * @deprecated octokit.activity.listFeeds() has been renamed to octokit.activity.getFeeds() (2020-03-25)
      */
     listFeeds: {
-      (params?: RequestParameters & Endpoints["GET /feeds"][0]): Promise<
-        OctokitResponse<Endpoints["GET /feeds"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /feeds"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /feeds"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -624,7 +740,8 @@ export type RestEndpointMethods = {
      */
     listNotifications: {
       (
-        params?: RequestParameters & Endpoints["GET /notifications"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /notifications"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /notifications"][2]>>;
 
       endpoint: EndpointInterface;
@@ -636,7 +753,8 @@ export type RestEndpointMethods = {
      */
     listNotificationsForAuthenticatedUser: {
       (
-        params?: RequestParameters & Endpoints["GET /notifications"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /notifications"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /notifications"][2]>>;
 
       endpoint: EndpointInterface;
@@ -648,7 +766,10 @@ export type RestEndpointMethods = {
     listNotificationsForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/notifications"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/notifications"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/notifications"][2]>
       >;
@@ -661,7 +782,10 @@ export type RestEndpointMethods = {
     listOrgEventsForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/events/orgs/:org"][0]
+          Omit<
+            Endpoints["GET /users/:username/events/orgs/:org"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/events/orgs/:org"][2]>
       >;
@@ -672,9 +796,10 @@ export type RestEndpointMethods = {
      * We delay the public events feed by five minutes, which means the most recent event returned by the public events API actually occurred at least five minutes ago.
      */
     listPublicEvents: {
-      (params?: RequestParameters & Endpoints["GET /events"][0]): Promise<
-        OctokitResponse<Endpoints["GET /events"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /events"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /events"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -683,7 +808,8 @@ export type RestEndpointMethods = {
      */
     listPublicEventsForOrg: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/events"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /orgs/:org/events"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/events"][2]>>;
 
       endpoint: EndpointInterface;
@@ -692,7 +818,10 @@ export type RestEndpointMethods = {
     listPublicEventsForRepoNetwork: {
       (
         params?: RequestParameters &
-          Endpoints["GET /networks/:owner/:repo/events"][0]
+          Omit<
+            Endpoints["GET /networks/:owner/:repo/events"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /networks/:owner/:repo/events"][2]>
       >;
@@ -703,7 +832,10 @@ export type RestEndpointMethods = {
     listPublicEventsForUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/events/public"][0]
+          Omit<
+            Endpoints["GET /users/:username/events/public"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/events/public"][2]>
       >;
@@ -713,7 +845,8 @@ export type RestEndpointMethods = {
 
     listPublicOrgEvents: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/events"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /orgs/:org/events"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/events"][2]>>;
 
       endpoint: EndpointInterface;
@@ -724,7 +857,10 @@ export type RestEndpointMethods = {
     listReceivedEventsForUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/received_events"][0]
+          Omit<
+            Endpoints["GET /users/:username/received_events"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/received_events"][2]>
       >;
@@ -735,7 +871,10 @@ export type RestEndpointMethods = {
     listReceivedPublicEventsForUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/received_events/public"][0]
+          Omit<
+            Endpoints["GET /users/:username/received_events/public"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /users/:username/received_events/public"][2]
@@ -748,7 +887,10 @@ export type RestEndpointMethods = {
     listRepoEvents: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/events"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/events"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/events"][2]>
       >;
@@ -761,7 +903,10 @@ export type RestEndpointMethods = {
     listRepoNotificationsForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/notifications"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/notifications"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/notifications"][2]>
       >;
@@ -774,9 +919,10 @@ export type RestEndpointMethods = {
      * You can also find out _when_ stars were created by passing the following custom [media type](https://developer.github.com/v3/media/) via the `Accept` header:
      */
     listReposStarredByAuthenticatedUser: {
-      (params?: RequestParameters & Endpoints["GET /user/starred"][0]): Promise<
-        OctokitResponse<Endpoints["GET /user/starred"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/starred"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /user/starred"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -788,7 +934,10 @@ export type RestEndpointMethods = {
     listReposStarredByUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/starred"][0]
+          Omit<
+            Endpoints["GET /users/:username/starred"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /users/:username/starred"][2]>>;
 
       endpoint: EndpointInterface;
@@ -799,7 +948,10 @@ export type RestEndpointMethods = {
     listReposWatchedByUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/subscriptions"][0]
+          Omit<
+            Endpoints["GET /users/:username/subscriptions"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/subscriptions"][2]>
       >;
@@ -814,7 +966,10 @@ export type RestEndpointMethods = {
     listStargazersForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/stargazers"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/stargazers"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/stargazers"][2]>
       >;
@@ -826,7 +981,8 @@ export type RestEndpointMethods = {
      */
     listWatchedReposForAuthenticatedUser: {
       (
-        params?: RequestParameters & Endpoints["GET /user/subscriptions"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/subscriptions"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /user/subscriptions"][2]>>;
 
       endpoint: EndpointInterface;
@@ -837,7 +993,10 @@ export type RestEndpointMethods = {
     listWatchersForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/subscribers"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/subscribers"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/subscribers"][2]>
       >;
@@ -850,7 +1009,8 @@ export type RestEndpointMethods = {
      */
     markAsRead: {
       (
-        params?: RequestParameters & Endpoints["PUT /notifications"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["PUT /notifications"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["PUT /notifications"][2]>>;
 
       endpoint: EndpointInterface;
@@ -860,7 +1020,8 @@ export type RestEndpointMethods = {
      */
     markNotificationsAsRead: {
       (
-        params?: RequestParameters & Endpoints["PUT /notifications"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["PUT /notifications"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["PUT /notifications"][2]>>;
 
       endpoint: EndpointInterface;
@@ -872,7 +1033,10 @@ export type RestEndpointMethods = {
     markNotificationsAsReadForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/notifications"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/notifications"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /repos/:owner/:repo/notifications"][2]>
       >;
@@ -885,7 +1049,10 @@ export type RestEndpointMethods = {
     markRepoNotificationsAsRead: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/notifications"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/notifications"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /repos/:owner/:repo/notifications"][2]>
       >;
@@ -896,7 +1063,10 @@ export type RestEndpointMethods = {
     markThreadAsRead: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /notifications/threads/:thread_id"][0]
+          Omit<
+            Endpoints["PATCH /notifications/threads/:thread_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PATCH /notifications/threads/:thread_id"][2]>
       >;
@@ -909,7 +1079,10 @@ export type RestEndpointMethods = {
     setRepoSubscription: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/subscription"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/subscription"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /repos/:owner/:repo/subscription"][2]>
       >;
@@ -926,7 +1099,10 @@ export type RestEndpointMethods = {
     setThreadSubscription: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /notifications/threads/:thread_id/subscription"][0]
+          Omit<
+            Endpoints["PUT /notifications/threads/:thread_id/subscription"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /notifications/threads/:thread_id/subscription"][2]
@@ -942,7 +1118,10 @@ export type RestEndpointMethods = {
     starRepo: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /user/starred/:owner/:repo"][0]
+          Omit<
+            Endpoints["PUT /user/starred/:owner/:repo"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /user/starred/:owner/:repo"][2]>
       >;
@@ -955,7 +1134,10 @@ export type RestEndpointMethods = {
     starRepoForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /user/starred/:owner/:repo"][0]
+          Omit<
+            Endpoints["PUT /user/starred/:owner/:repo"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /user/starred/:owner/:repo"][2]>
       >;
@@ -968,7 +1150,10 @@ export type RestEndpointMethods = {
     unstarRepo: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /user/starred/:owner/:repo"][0]
+          Omit<
+            Endpoints["DELETE /user/starred/:owner/:repo"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /user/starred/:owner/:repo"][2]>
       >;
@@ -979,7 +1164,10 @@ export type RestEndpointMethods = {
     unstarRepoForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /user/starred/:owner/:repo"][0]
+          Omit<
+            Endpoints["DELETE /user/starred/:owner/:repo"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /user/starred/:owner/:repo"][2]>
       >;
@@ -996,7 +1184,10 @@ export type RestEndpointMethods = {
     addRepoToInstallation: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /user/installations/:installation_id/repositories/:repository_id"][0]
+          Omit<
+            Endpoints["PUT /user/installations/:installation_id/repositories/:repository_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /user/installations/:installation_id/repositories/:repository_id"][2]
@@ -1014,7 +1205,10 @@ export type RestEndpointMethods = {
     checkAccountIsAssociatedWithAny: {
       (
         params?: RequestParameters &
-          Endpoints["GET /marketplace_listing/accounts/:account_id"][0]
+          Omit<
+            Endpoints["GET /marketplace_listing/accounts/:account_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /marketplace_listing/accounts/:account_id"][2]
@@ -1032,7 +1226,10 @@ export type RestEndpointMethods = {
     checkAccountIsAssociatedWithAnyStubbed: {
       (
         params?: RequestParameters &
-          Endpoints["GET /marketplace_listing/stubbed/accounts/:account_id"][0]
+          Omit<
+            Endpoints["GET /marketplace_listing/stubbed/accounts/:account_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /marketplace_listing/stubbed/accounts/:account_id"][2]
@@ -1047,7 +1244,10 @@ export type RestEndpointMethods = {
     checkToken: {
       (
         params?: RequestParameters &
-          Endpoints["POST /applications/:client_id/token"][0]
+          Omit<
+            Endpoints["POST /applications/:client_id/token"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /applications/:client_id/token"][2]>
       >;
@@ -1066,7 +1266,10 @@ export type RestEndpointMethods = {
     createContentAttachment: {
       (
         params?: RequestParameters &
-          Endpoints["POST /content_references/:content_reference_id/attachments"][0]
+          Omit<
+            Endpoints["POST /content_references/:content_reference_id/attachments"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /content_references/:content_reference_id/attachments"][2]
@@ -1081,7 +1284,10 @@ export type RestEndpointMethods = {
     createFromManifest: {
       (
         params?: RequestParameters &
-          Endpoints["POST /app-manifests/:code/conversions"][0]
+          Omit<
+            Endpoints["POST /app-manifests/:code/conversions"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /app-manifests/:code/conversions"][2]>
       >;
@@ -1098,7 +1304,10 @@ export type RestEndpointMethods = {
     createInstallationToken: {
       (
         params?: RequestParameters &
-          Endpoints["POST /app/installations/:installation_id/access_tokens"][0]
+          Omit<
+            Endpoints["POST /app/installations/:installation_id/access_tokens"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /app/installations/:installation_id/access_tokens"][2]
@@ -1115,7 +1324,10 @@ export type RestEndpointMethods = {
     deleteAuthorization: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /applications/:client_id/grant"][0]
+          Omit<
+            Endpoints["DELETE /applications/:client_id/grant"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /applications/:client_id/grant"][2]>
       >;
@@ -1130,7 +1342,10 @@ export type RestEndpointMethods = {
     deleteInstallation: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /app/installations/:installation_id"][0]
+          Omit<
+            Endpoints["DELETE /app/installations/:installation_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /app/installations/:installation_id"][2]
@@ -1145,7 +1360,10 @@ export type RestEndpointMethods = {
     deleteToken: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /applications/:client_id/token"][0]
+          Omit<
+            Endpoints["DELETE /applications/:client_id/token"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /applications/:client_id/token"][2]>
       >;
@@ -1158,9 +1376,12 @@ export type RestEndpointMethods = {
      * You must use a [JWT](https://developer.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
      */
     getAuthenticated: {
-      (params?: RequestParameters & Endpoints["GET /app"][0]): Promise<
-        OctokitResponse<Endpoints["GET /app"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /app"][0], "baseUrl" | "headers"> & {
+            mediaType: { previews: string[] };
+          }
+      ): Promise<OctokitResponse<Endpoints["GET /app"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -1171,7 +1392,10 @@ export type RestEndpointMethods = {
      */
     getBySlug: {
       (
-        params?: RequestParameters & Endpoints["GET /apps/:app_slug"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /apps/:app_slug"][0], "baseUrl" | "headers"> & {
+            mediaType: { previews: string[] };
+          }
       ): Promise<OctokitResponse<Endpoints["GET /apps/:app_slug"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1182,7 +1406,10 @@ export type RestEndpointMethods = {
     getInstallation: {
       (
         params?: RequestParameters &
-          Endpoints["GET /app/installations/:installation_id"][0]
+          Omit<
+            Endpoints["GET /app/installations/:installation_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /app/installations/:installation_id"][2]>
       >;
@@ -1196,7 +1423,11 @@ export type RestEndpointMethods = {
      */
     getOrgInstallation: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/installation"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /orgs/:org/installation"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/installation"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1209,7 +1440,10 @@ export type RestEndpointMethods = {
     getRepoInstallation: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/installation"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/installation"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/installation"][2]>
       >;
@@ -1224,7 +1458,10 @@ export type RestEndpointMethods = {
     getSubscriptionPlanForAccount: {
       (
         params?: RequestParameters &
-          Endpoints["GET /marketplace_listing/accounts/:account_id"][0]
+          Omit<
+            Endpoints["GET /marketplace_listing/accounts/:account_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /marketplace_listing/accounts/:account_id"][2]
@@ -1241,7 +1478,10 @@ export type RestEndpointMethods = {
     getSubscriptionPlanForAccountStubbed: {
       (
         params?: RequestParameters &
-          Endpoints["GET /marketplace_listing/stubbed/accounts/:account_id"][0]
+          Omit<
+            Endpoints["GET /marketplace_listing/stubbed/accounts/:account_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /marketplace_listing/stubbed/accounts/:account_id"][2]
@@ -1258,7 +1498,10 @@ export type RestEndpointMethods = {
     getUserInstallation: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/installation"][0]
+          Omit<
+            Endpoints["GET /users/:username/installation"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/installation"][2]>
       >;
@@ -1273,7 +1516,10 @@ export type RestEndpointMethods = {
     listAccountsForPlan: {
       (
         params?: RequestParameters &
-          Endpoints["GET /marketplace_listing/plans/:plan_id/accounts"][0]
+          Omit<
+            Endpoints["GET /marketplace_listing/plans/:plan_id/accounts"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /marketplace_listing/plans/:plan_id/accounts"][2]
@@ -1290,7 +1536,10 @@ export type RestEndpointMethods = {
     listAccountsForPlanStubbed: {
       (
         params?: RequestParameters &
-          Endpoints["GET /marketplace_listing/stubbed/plans/:plan_id/accounts"][0]
+          Omit<
+            Endpoints["GET /marketplace_listing/stubbed/plans/:plan_id/accounts"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /marketplace_listing/stubbed/plans/:plan_id/accounts"][2]
@@ -1308,7 +1557,10 @@ export type RestEndpointMethods = {
     listAccountsUserOrOrgOnPlan: {
       (
         params?: RequestParameters &
-          Endpoints["GET /marketplace_listing/plans/:plan_id/accounts"][0]
+          Omit<
+            Endpoints["GET /marketplace_listing/plans/:plan_id/accounts"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /marketplace_listing/plans/:plan_id/accounts"][2]
@@ -1326,7 +1578,10 @@ export type RestEndpointMethods = {
     listAccountsUserOrOrgOnPlanStubbed: {
       (
         params?: RequestParameters &
-          Endpoints["GET /marketplace_listing/stubbed/plans/:plan_id/accounts"][0]
+          Omit<
+            Endpoints["GET /marketplace_listing/stubbed/plans/:plan_id/accounts"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /marketplace_listing/stubbed/plans/:plan_id/accounts"][2]
@@ -1347,7 +1602,10 @@ export type RestEndpointMethods = {
     listInstallationReposForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/installations/:installation_id/repositories"][0]
+          Omit<
+            Endpoints["GET /user/installations/:installation_id/repositories"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /user/installations/:installation_id/repositories"][2]
@@ -1363,7 +1621,11 @@ export type RestEndpointMethods = {
      */
     listInstallations: {
       (
-        params?: RequestParameters & Endpoints["GET /app/installations"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /app/installations"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["GET /app/installations"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1379,7 +1641,11 @@ export type RestEndpointMethods = {
      */
     listInstallationsForAuthenticatedUser: {
       (
-        params?: RequestParameters & Endpoints["GET /user/installations"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /user/installations"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["GET /user/installations"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1391,7 +1657,10 @@ export type RestEndpointMethods = {
     listMarketplacePurchasesForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/marketplace_purchases"][0]
+          Omit<
+            Endpoints["GET /user/marketplace_purchases"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /user/marketplace_purchases"][2]>
       >;
@@ -1405,7 +1674,10 @@ export type RestEndpointMethods = {
     listMarketplacePurchasesForAuthenticatedUserStubbed: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/marketplace_purchases/stubbed"][0]
+          Omit<
+            Endpoints["GET /user/marketplace_purchases/stubbed"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /user/marketplace_purchases/stubbed"][2]>
       >;
@@ -1420,7 +1692,10 @@ export type RestEndpointMethods = {
     listPlans: {
       (
         params?: RequestParameters &
-          Endpoints["GET /marketplace_listing/plans"][0]
+          Omit<
+            Endpoints["GET /marketplace_listing/plans"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /marketplace_listing/plans"][2]>
       >;
@@ -1435,7 +1710,10 @@ export type RestEndpointMethods = {
     listPlansStubbed: {
       (
         params?: RequestParameters &
-          Endpoints["GET /marketplace_listing/stubbed/plans"][0]
+          Omit<
+            Endpoints["GET /marketplace_listing/stubbed/plans"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /marketplace_listing/stubbed/plans"][2]>
       >;
@@ -1450,7 +1728,10 @@ export type RestEndpointMethods = {
     listRepos: {
       (
         params?: RequestParameters &
-          Endpoints["GET /installation/repositories"][0]
+          Omit<
+            Endpoints["GET /installation/repositories"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /installation/repositories"][2]>
       >;
@@ -1463,7 +1744,10 @@ export type RestEndpointMethods = {
     listSubscriptionsForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/marketplace_purchases"][0]
+          Omit<
+            Endpoints["GET /user/marketplace_purchases"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /user/marketplace_purchases"][2]>
       >;
@@ -1476,7 +1760,10 @@ export type RestEndpointMethods = {
     listSubscriptionsForAuthenticatedUserStubbed: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/marketplace_purchases/stubbed"][0]
+          Omit<
+            Endpoints["GET /user/marketplace_purchases/stubbed"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /user/marketplace_purchases/stubbed"][2]>
       >;
@@ -1491,7 +1778,10 @@ export type RestEndpointMethods = {
     removeRepoFromInstallation: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /user/installations/:installation_id/repositories/:repository_id"][0]
+          Omit<
+            Endpoints["DELETE /user/installations/:installation_id/repositories/:repository_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /user/installations/:installation_id/repositories/:repository_id"][2]
@@ -1506,7 +1796,10 @@ export type RestEndpointMethods = {
     resetToken: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /applications/:client_id/token"][0]
+          Omit<
+            Endpoints["PATCH /applications/:client_id/token"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PATCH /applications/:client_id/token"][2]>
       >;
@@ -1522,7 +1815,11 @@ export type RestEndpointMethods = {
      */
     revokeInstallationToken: {
       (
-        params?: RequestParameters & Endpoints["DELETE /installation/token"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["DELETE /installation/token"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["DELETE /installation/token"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1537,7 +1834,10 @@ export type RestEndpointMethods = {
     create: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/check-runs"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/check-runs"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/check-runs"][2]>
       >;
@@ -1552,7 +1852,10 @@ export type RestEndpointMethods = {
     createSuite: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/check-suites"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/check-suites"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/check-suites"][2]>
       >;
@@ -1567,7 +1870,10 @@ export type RestEndpointMethods = {
     get: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/check-runs/:check_run_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/check-runs/:check_run_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/check-runs/:check_run_id"][2]
@@ -1584,7 +1890,10 @@ export type RestEndpointMethods = {
     getSuite: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/check-suites/:check_suite_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/check-suites/:check_suite_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/check-suites/:check_suite_id"][2]
@@ -1599,7 +1908,10 @@ export type RestEndpointMethods = {
     listAnnotations: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/check-runs/:check_run_id/annotations"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/check-runs/:check_run_id/annotations"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/check-runs/:check_run_id/annotations"][2]
@@ -1616,7 +1928,10 @@ export type RestEndpointMethods = {
     listForRef: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/commits/:ref/check-runs"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/commits/:ref/check-runs"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/commits/:ref/check-runs"][2]
@@ -1633,7 +1948,10 @@ export type RestEndpointMethods = {
     listForSuite: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs"][2]
@@ -1650,7 +1968,10 @@ export type RestEndpointMethods = {
     listSuitesForRef: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/commits/:ref/check-suites"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/commits/:ref/check-suites"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/commits/:ref/check-suites"][2]
@@ -1667,7 +1988,10 @@ export type RestEndpointMethods = {
     rerequestSuite: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest"][2]
@@ -1682,7 +2006,10 @@ export type RestEndpointMethods = {
     setSuitesPreferences: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/check-suites/preferences"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/check-suites/preferences"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/check-suites/preferences"][2]
@@ -1699,7 +2026,10 @@ export type RestEndpointMethods = {
     update: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/check-runs/:check_run_id"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/check-runs/:check_run_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/check-runs/:check_run_id"][2]
@@ -1712,7 +2042,10 @@ export type RestEndpointMethods = {
   codesOfConduct: {
     getAllCodesOfConduct: {
       (
-        params?: RequestParameters & Endpoints["GET /codes_of_conduct"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /codes_of_conduct"][0], "baseUrl" | "headers"> & {
+            mediaType: { previews: string[] };
+          }
       ): Promise<OctokitResponse<Endpoints["GET /codes_of_conduct"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1720,7 +2053,11 @@ export type RestEndpointMethods = {
 
     getConductCode: {
       (
-        params?: RequestParameters & Endpoints["GET /codes_of_conduct/:key"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /codes_of_conduct/:key"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["GET /codes_of_conduct/:key"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1731,7 +2068,10 @@ export type RestEndpointMethods = {
     getForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/community/code_of_conduct"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/community/code_of_conduct"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/community/code_of_conduct"][2]
@@ -1745,7 +2085,10 @@ export type RestEndpointMethods = {
      */
     listConductCodes: {
       (
-        params?: RequestParameters & Endpoints["GET /codes_of_conduct"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /codes_of_conduct"][0], "baseUrl" | "headers"> & {
+            mediaType: { previews: string[] };
+          }
       ): Promise<OctokitResponse<Endpoints["GET /codes_of_conduct"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1756,9 +2099,10 @@ export type RestEndpointMethods = {
      * Lists all the emojis available to use on GitHub.
      */
     get: {
-      (params?: RequestParameters & Endpoints["GET /emojis"][0]): Promise<
-        OctokitResponse<Endpoints["GET /emojis"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /emojis"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /emojis"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -1766,7 +2110,8 @@ export type RestEndpointMethods = {
   gists: {
     checkIsStarred: {
       (
-        params?: RequestParameters & Endpoints["GET /gists/:gist_id/star"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /gists/:gist_id/star"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /gists/:gist_id/star"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1777,9 +2122,10 @@ export type RestEndpointMethods = {
      * **Note:** Don't name your files "gistfile" with a numerical suffix. This is the format of the automatic naming scheme that Gist uses internally.
      */
     create: {
-      (params?: RequestParameters & Endpoints["POST /gists"][0]): Promise<
-        OctokitResponse<Endpoints["POST /gists"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["POST /gists"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["POST /gists"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -1787,7 +2133,10 @@ export type RestEndpointMethods = {
     createComment: {
       (
         params?: RequestParameters &
-          Endpoints["POST /gists/:gist_id/comments"][0]
+          Omit<
+            Endpoints["POST /gists/:gist_id/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /gists/:gist_id/comments"][2]>
       >;
@@ -1797,7 +2146,8 @@ export type RestEndpointMethods = {
 
     delete: {
       (
-        params?: RequestParameters & Endpoints["DELETE /gists/:gist_id"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["DELETE /gists/:gist_id"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["DELETE /gists/:gist_id"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1806,7 +2156,10 @@ export type RestEndpointMethods = {
     deleteComment: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /gists/:gist_id/comments/:comment_id"][0]
+          Omit<
+            Endpoints["DELETE /gists/:gist_id/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /gists/:gist_id/comments/:comment_id"][2]
@@ -1820,7 +2173,11 @@ export type RestEndpointMethods = {
      */
     fork: {
       (
-        params?: RequestParameters & Endpoints["POST /gists/:gist_id/forks"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["POST /gists/:gist_id/forks"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["POST /gists/:gist_id/forks"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1828,7 +2185,8 @@ export type RestEndpointMethods = {
 
     get: {
       (
-        params?: RequestParameters & Endpoints["GET /gists/:gist_id"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /gists/:gist_id"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /gists/:gist_id"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1837,7 +2195,10 @@ export type RestEndpointMethods = {
     getComment: {
       (
         params?: RequestParameters &
-          Endpoints["GET /gists/:gist_id/comments/:comment_id"][0]
+          Omit<
+            Endpoints["GET /gists/:gist_id/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /gists/:gist_id/comments/:comment_id"][2]
@@ -1849,7 +2210,8 @@ export type RestEndpointMethods = {
 
     getRevision: {
       (
-        params?: RequestParameters & Endpoints["GET /gists/:gist_id/:sha"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /gists/:gist_id/:sha"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /gists/:gist_id/:sha"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1858,9 +2220,10 @@ export type RestEndpointMethods = {
      * Lists the authenticated user's gists or if called anonymously, this endpoint returns all public gists:
      */
     list: {
-      (params?: RequestParameters & Endpoints["GET /gists"][0]): Promise<
-        OctokitResponse<Endpoints["GET /gists"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /gists"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /gists"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -1868,7 +2231,10 @@ export type RestEndpointMethods = {
     listComments: {
       (
         params?: RequestParameters &
-          Endpoints["GET /gists/:gist_id/comments"][0]
+          Omit<
+            Endpoints["GET /gists/:gist_id/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /gists/:gist_id/comments"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1876,7 +2242,11 @@ export type RestEndpointMethods = {
 
     listCommits: {
       (
-        params?: RequestParameters & Endpoints["GET /gists/:gist_id/commits"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /gists/:gist_id/commits"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /gists/:gist_id/commits"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1886,7 +2256,11 @@ export type RestEndpointMethods = {
      */
     listForUser: {
       (
-        params?: RequestParameters & Endpoints["GET /users/:username/gists"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /users/:username/gists"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /users/:username/gists"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1894,7 +2268,8 @@ export type RestEndpointMethods = {
 
     listForks: {
       (
-        params?: RequestParameters & Endpoints["GET /gists/:gist_id/forks"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /gists/:gist_id/forks"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /gists/:gist_id/forks"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1905,9 +2280,10 @@ export type RestEndpointMethods = {
      * Note: With [pagination](https://developer.github.com/v3/#pagination), you can fetch up to 3000 gists. For example, you can fetch 100 pages with 30 gists per page or 30 pages with 100 gists per page.
      */
     listPublic: {
-      (params?: RequestParameters & Endpoints["GET /gists/public"][0]): Promise<
-        OctokitResponse<Endpoints["GET /gists/public"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /gists/public"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /gists/public"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -1917,7 +2293,11 @@ export type RestEndpointMethods = {
      */
     listPublicForUser: {
       (
-        params?: RequestParameters & Endpoints["GET /users/:username/gists"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /users/:username/gists"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /users/:username/gists"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1927,7 +2307,8 @@ export type RestEndpointMethods = {
      */
     listStarred: {
       (
-        params?: RequestParameters & Endpoints["GET /gists/starred"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /gists/starred"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /gists/starred"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1937,7 +2318,8 @@ export type RestEndpointMethods = {
      */
     star: {
       (
-        params?: RequestParameters & Endpoints["PUT /gists/:gist_id/star"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["PUT /gists/:gist_id/star"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["PUT /gists/:gist_id/star"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1945,7 +2327,11 @@ export type RestEndpointMethods = {
 
     unstar: {
       (
-        params?: RequestParameters & Endpoints["DELETE /gists/:gist_id/star"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["DELETE /gists/:gist_id/star"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["DELETE /gists/:gist_id/star"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1955,7 +2341,8 @@ export type RestEndpointMethods = {
      */
     update: {
       (
-        params?: RequestParameters & Endpoints["PATCH /gists/:gist_id"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["PATCH /gists/:gist_id"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["PATCH /gists/:gist_id"][2]>>;
 
       endpoint: EndpointInterface;
@@ -1964,7 +2351,10 @@ export type RestEndpointMethods = {
     updateComment: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /gists/:gist_id/comments/:comment_id"][0]
+          Omit<
+            Endpoints["PATCH /gists/:gist_id/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /gists/:gist_id/comments/:comment_id"][2]
@@ -1978,7 +2368,10 @@ export type RestEndpointMethods = {
     createBlob: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/git/blobs"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/git/blobs"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/git/blobs"][2]>
       >;
@@ -2017,7 +2410,10 @@ export type RestEndpointMethods = {
     createCommit: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/git/commits"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/git/commits"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/git/commits"][2]>
       >;
@@ -2030,7 +2426,10 @@ export type RestEndpointMethods = {
     createRef: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/git/refs"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/git/refs"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/git/refs"][2]>
       >;
@@ -2065,7 +2464,10 @@ export type RestEndpointMethods = {
     createTag: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/git/tags"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/git/tags"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/git/tags"][2]>
       >;
@@ -2080,7 +2482,10 @@ export type RestEndpointMethods = {
     createTree: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/git/trees"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/git/trees"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/git/trees"][2]>
       >;
@@ -2091,7 +2496,10 @@ export type RestEndpointMethods = {
     deleteRef: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/git/refs/:ref"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/git/refs/:ref"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/git/refs/:ref"][2]
@@ -2108,7 +2516,10 @@ export type RestEndpointMethods = {
     getBlob: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/git/blobs/:file_sha"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/git/blobs/:file_sha"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/git/blobs/:file_sha"][2]
@@ -2145,7 +2556,10 @@ export type RestEndpointMethods = {
     getCommit: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/git/commits/:commit_sha"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/git/commits/:commit_sha"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/git/commits/:commit_sha"][2]
@@ -2164,7 +2578,10 @@ export type RestEndpointMethods = {
     getRef: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/git/ref/:ref"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/git/ref/:ref"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/git/ref/:ref"][2]>
       >;
@@ -2197,7 +2614,10 @@ export type RestEndpointMethods = {
     getTag: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/git/tags/:tag_sha"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/git/tags/:tag_sha"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/git/tags/:tag_sha"][2]
@@ -2214,7 +2634,10 @@ export type RestEndpointMethods = {
     getTree: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/git/trees/:tree_sha"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/git/trees/:tree_sha"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/git/trees/:tree_sha"][2]
@@ -2235,7 +2658,10 @@ export type RestEndpointMethods = {
     listMatchingRefs: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/git/matching-refs/:ref"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/git/matching-refs/:ref"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/git/matching-refs/:ref"][2]
@@ -2248,7 +2674,10 @@ export type RestEndpointMethods = {
     updateRef: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/git/refs/:ref"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/git/refs/:ref"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PATCH /repos/:owner/:repo/git/refs/:ref"][2]>
       >;
@@ -2265,7 +2694,10 @@ export type RestEndpointMethods = {
     getTemplate: {
       (
         params?: RequestParameters &
-          Endpoints["GET /gitignore/templates/:name"][0]
+          Omit<
+            Endpoints["GET /gitignore/templates/:name"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /gitignore/templates/:name"][2]>
       >;
@@ -2277,7 +2709,8 @@ export type RestEndpointMethods = {
      */
     listTemplates: {
       (
-        params?: RequestParameters & Endpoints["GET /gitignore/templates"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /gitignore/templates"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /gitignore/templates"][2]>>;
 
       endpoint: EndpointInterface;
@@ -2290,7 +2723,10 @@ export type RestEndpointMethods = {
     addOrUpdateRestrictionsForOrg: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /orgs/:org/interaction-limits"][0]
+          Omit<
+            Endpoints["PUT /orgs/:org/interaction-limits"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["PUT /orgs/:org/interaction-limits"][2]>
       >;
@@ -2303,7 +2739,10 @@ export type RestEndpointMethods = {
     addOrUpdateRestrictionsForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/interaction-limits"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/interaction-limits"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/interaction-limits"][2]
@@ -2318,7 +2757,10 @@ export type RestEndpointMethods = {
     getRestrictionsForOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/interaction-limits"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/interaction-limits"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/interaction-limits"][2]>
       >;
@@ -2331,7 +2773,10 @@ export type RestEndpointMethods = {
     getRestrictionsForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/interaction-limits"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/interaction-limits"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/interaction-limits"][2]
@@ -2346,7 +2791,10 @@ export type RestEndpointMethods = {
     removeRestrictionsForOrg: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/interaction-limits"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/interaction-limits"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["DELETE /orgs/:org/interaction-limits"][2]>
       >;
@@ -2359,7 +2807,10 @@ export type RestEndpointMethods = {
     removeRestrictionsForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/interaction-limits"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/interaction-limits"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/interaction-limits"][2]
@@ -2378,7 +2829,10 @@ export type RestEndpointMethods = {
     addAssignees: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/issues/:issue_number/assignees"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/issues/:issue_number/assignees"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/issues/:issue_number/assignees"][2]
@@ -2391,7 +2845,10 @@ export type RestEndpointMethods = {
     addLabels: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/issues/:issue_number/labels"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/issues/:issue_number/labels"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/issues/:issue_number/labels"][2]
@@ -2410,7 +2867,10 @@ export type RestEndpointMethods = {
     checkAssignee: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/assignees/:assignee"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/assignees/:assignee"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/assignees/:assignee"][2]
@@ -2427,7 +2887,10 @@ export type RestEndpointMethods = {
     create: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/issues"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/issues"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/issues"][2]>
       >;
@@ -2440,7 +2903,10 @@ export type RestEndpointMethods = {
     createComment: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/issues/:issue_number/comments"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/issues/:issue_number/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/issues/:issue_number/comments"][2]
@@ -2453,7 +2919,10 @@ export type RestEndpointMethods = {
     createLabel: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/labels"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/labels"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/labels"][2]>
       >;
@@ -2464,7 +2933,10 @@ export type RestEndpointMethods = {
     createMilestone: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/milestones"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/milestones"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/milestones"][2]>
       >;
@@ -2475,7 +2947,10 @@ export type RestEndpointMethods = {
     deleteComment: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/issues/comments/:comment_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/issues/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/issues/comments/:comment_id"][2]
@@ -2488,7 +2963,10 @@ export type RestEndpointMethods = {
     deleteLabel: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/labels/:name"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/labels/:name"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /repos/:owner/:repo/labels/:name"][2]>
       >;
@@ -2499,7 +2977,10 @@ export type RestEndpointMethods = {
     deleteMilestone: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/milestones/:milestone_number"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/milestones/:milestone_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/milestones/:milestone_number"][2]
@@ -2518,7 +2999,10 @@ export type RestEndpointMethods = {
     get: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/:issue_number"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/:issue_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number"][2]
@@ -2531,7 +3015,10 @@ export type RestEndpointMethods = {
     getComment: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/comments/:comment_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/issues/comments/:comment_id"][2]
@@ -2544,7 +3031,10 @@ export type RestEndpointMethods = {
     getEvent: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/events/:event_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/events/:event_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/issues/events/:event_id"][2]
@@ -2557,7 +3047,10 @@ export type RestEndpointMethods = {
     getLabel: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/labels/:name"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/labels/:name"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/labels/:name"][2]>
       >;
@@ -2568,7 +3061,10 @@ export type RestEndpointMethods = {
     getMilestone: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/milestones/:milestone_number"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/milestones/:milestone_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/milestones/:milestone_number"][2]
@@ -2585,9 +3081,10 @@ export type RestEndpointMethods = {
      * Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
      */
     list: {
-      (params?: RequestParameters & Endpoints["GET /issues"][0]): Promise<
-        OctokitResponse<Endpoints["GET /issues"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /issues"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /issues"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -2597,7 +3094,10 @@ export type RestEndpointMethods = {
     listAssignees: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/assignees"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/assignees"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/assignees"][2]>
       >;
@@ -2610,7 +3110,10 @@ export type RestEndpointMethods = {
     listComments: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/:issue_number/comments"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/:issue_number/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number/comments"][2]
@@ -2625,7 +3128,10 @@ export type RestEndpointMethods = {
     listCommentsForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/comments"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/issues/comments"][2]>
       >;
@@ -2636,7 +3142,10 @@ export type RestEndpointMethods = {
     listEvents: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/:issue_number/events"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/:issue_number/events"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number/events"][2]
@@ -2649,7 +3158,10 @@ export type RestEndpointMethods = {
     listEventsForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/events"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/events"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/issues/events"][2]>
       >;
@@ -2660,7 +3172,10 @@ export type RestEndpointMethods = {
     listEventsForTimeline: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/:issue_number/timeline"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/:issue_number/timeline"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number/timeline"][2]
@@ -2677,9 +3192,10 @@ export type RestEndpointMethods = {
      * Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
      */
     listForAuthenticatedUser: {
-      (params?: RequestParameters & Endpoints["GET /user/issues"][0]): Promise<
-        OctokitResponse<Endpoints["GET /user/issues"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/issues"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /user/issues"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -2692,7 +3208,8 @@ export type RestEndpointMethods = {
      */
     listForOrg: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/issues"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /orgs/:org/issues"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/issues"][2]>>;
 
       endpoint: EndpointInterface;
@@ -2707,7 +3224,10 @@ export type RestEndpointMethods = {
     listForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/issues"][2]>
       >;
@@ -2718,7 +3238,10 @@ export type RestEndpointMethods = {
     listLabelsForMilestone: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/milestones/:milestone_number/labels"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/milestones/:milestone_number/labels"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/milestones/:milestone_number/labels"][2]
@@ -2731,7 +3254,10 @@ export type RestEndpointMethods = {
     listLabelsForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/labels"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/labels"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/labels"][2]>
       >;
@@ -2742,7 +3268,10 @@ export type RestEndpointMethods = {
     listLabelsOnIssue: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/:issue_number/labels"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/:issue_number/labels"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number/labels"][2]
@@ -2755,7 +3284,10 @@ export type RestEndpointMethods = {
     listMilestonesForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/milestones"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/milestones"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/milestones"][2]>
       >;
@@ -2770,7 +3302,10 @@ export type RestEndpointMethods = {
     lock: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/lock"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/lock"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/lock"][2]
@@ -2783,7 +3318,10 @@ export type RestEndpointMethods = {
     removeAllLabels: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels"][2]
@@ -2800,7 +3338,10 @@ export type RestEndpointMethods = {
     removeAssignees: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/assignees"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/assignees"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/assignees"][2]
@@ -2815,7 +3356,10 @@ export type RestEndpointMethods = {
     removeLabel: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels/:name"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels/:name"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels/:name"][2]
@@ -2830,7 +3374,10 @@ export type RestEndpointMethods = {
     removeLabels: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels"][2]
@@ -2843,7 +3390,10 @@ export type RestEndpointMethods = {
     replaceAllLabels: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/labels"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/labels"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/labels"][2]
@@ -2858,7 +3408,10 @@ export type RestEndpointMethods = {
     replaceLabels: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/labels"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/labels"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/labels"][2]
@@ -2873,7 +3426,10 @@ export type RestEndpointMethods = {
     unlock: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/lock"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/lock"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/lock"][2]
@@ -2888,7 +3444,10 @@ export type RestEndpointMethods = {
     update: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/issues/:issue_number"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/issues/:issue_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/issues/:issue_number"][2]
@@ -2901,7 +3460,10 @@ export type RestEndpointMethods = {
     updateComment: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/issues/comments/:comment_id"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/issues/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/issues/comments/:comment_id"][2]
@@ -2914,7 +3476,10 @@ export type RestEndpointMethods = {
     updateLabel: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/labels/:name"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/labels/:name"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PATCH /repos/:owner/:repo/labels/:name"][2]>
       >;
@@ -2925,7 +3490,10 @@ export type RestEndpointMethods = {
     updateMilestone: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/milestones/:milestone_number"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/milestones/:milestone_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/milestones/:milestone_number"][2]
@@ -2938,7 +3506,8 @@ export type RestEndpointMethods = {
   licenses: {
     get: {
       (
-        params?: RequestParameters & Endpoints["GET /licenses/:license"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /licenses/:license"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /licenses/:license"][2]>>;
 
       endpoint: EndpointInterface;
@@ -2951,7 +3520,10 @@ export type RestEndpointMethods = {
     getForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/license"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/license"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/license"][2]>
       >;
@@ -2960,18 +3532,20 @@ export type RestEndpointMethods = {
     };
 
     listCommonlyUsed: {
-      (params?: RequestParameters & Endpoints["GET /licenses"][0]): Promise<
-        OctokitResponse<Endpoints["GET /licenses"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /licenses"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /licenses"][2]>>;
 
       endpoint: EndpointInterface;
     };
   };
   markdown: {
     render: {
-      (params?: RequestParameters & Endpoints["POST /markdown"][0]): Promise<
-        OctokitResponse<Endpoints["POST /markdown"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["POST /markdown"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["POST /markdown"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -2980,7 +3554,8 @@ export type RestEndpointMethods = {
      */
     renderRaw: {
       (
-        params?: RequestParameters & Endpoints["POST /markdown/raw"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["POST /markdown/raw"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["POST /markdown/raw"][2]>>;
 
       endpoint: EndpointInterface;
@@ -2991,9 +3566,10 @@ export type RestEndpointMethods = {
      * This endpoint provides a list of GitHub's IP addresses. For more information, see "[About GitHub's IP addresses](https://help.github.com/articles/about-github-s-ip-addresses/)."
      */
     get: {
-      (params?: RequestParameters & Endpoints["GET /meta"][0]): Promise<
-        OctokitResponse<Endpoints["GET /meta"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /meta"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /meta"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -3005,7 +3581,10 @@ export type RestEndpointMethods = {
     cancelImport: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/import"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/import"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /repos/:owner/:repo/import"][2]>
       >;
@@ -3018,7 +3597,10 @@ export type RestEndpointMethods = {
     deleteArchiveForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /user/migrations/:migration_id/archive"][0]
+          Omit<
+            Endpoints["DELETE /user/migrations/:migration_id/archive"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /user/migrations/:migration_id/archive"][2]
@@ -3033,7 +3615,10 @@ export type RestEndpointMethods = {
     deleteArchiveForOrg: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/migrations/:migration_id/archive"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/migrations/:migration_id/archive"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/migrations/:migration_id/archive"][2]
@@ -3048,7 +3633,10 @@ export type RestEndpointMethods = {
     downloadArchiveForOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/migrations/:migration_id/archive"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/migrations/:migration_id/archive"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/migrations/:migration_id/archive"][2]
@@ -3083,7 +3671,10 @@ export type RestEndpointMethods = {
     getArchiveForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/migrations/:migration_id/archive"][0]
+          Omit<
+            Endpoints["GET /user/migrations/:migration_id/archive"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /user/migrations/:migration_id/archive"][2]
@@ -3100,7 +3691,10 @@ export type RestEndpointMethods = {
     getCommitAuthors: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/import/authors"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/import/authors"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/import/authors"][2]>
       >;
@@ -3146,7 +3740,10 @@ export type RestEndpointMethods = {
     getImportProgress: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/import"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/import"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/import"][2]>
       >;
@@ -3159,7 +3756,10 @@ export type RestEndpointMethods = {
     getLargeFiles: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/import/large_files"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/import/large_files"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/import/large_files"][2]
@@ -3181,7 +3781,10 @@ export type RestEndpointMethods = {
     getStatusForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/migrations/:migration_id"][0]
+          Omit<
+            Endpoints["GET /user/migrations/:migration_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /user/migrations/:migration_id"][2]>
       >;
@@ -3201,7 +3804,10 @@ export type RestEndpointMethods = {
     getStatusForOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/migrations/:migration_id"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/migrations/:migration_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/migrations/:migration_id"][2]>
       >;
@@ -3213,7 +3819,10 @@ export type RestEndpointMethods = {
      */
     listForAuthenticatedUser: {
       (
-        params?: RequestParameters & Endpoints["GET /user/migrations"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/migrations"][0], "baseUrl" | "headers"> & {
+            mediaType: { previews: string[] };
+          }
       ): Promise<OctokitResponse<Endpoints["GET /user/migrations"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3223,7 +3832,11 @@ export type RestEndpointMethods = {
      */
     listForOrg: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/migrations"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /orgs/:org/migrations"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/migrations"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3234,7 +3847,10 @@ export type RestEndpointMethods = {
     listReposForOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/migrations/:migration_id/repositories"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/migrations/:migration_id/repositories"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/migrations/:migration_id/repositories"][2]
@@ -3249,7 +3865,10 @@ export type RestEndpointMethods = {
     listReposForUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/:migration_id/repositories"][0]
+          Omit<
+            Endpoints["GET /user/:migration_id/repositories"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /user/:migration_id/repositories"][2]>
       >;
@@ -3262,7 +3881,10 @@ export type RestEndpointMethods = {
     mapCommitAuthor: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/import/authors/:author_id"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/import/authors/:author_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/import/authors/:author_id"][2]
@@ -3277,7 +3899,10 @@ export type RestEndpointMethods = {
     setLfsPreference: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/import/lfs"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/import/lfs"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PATCH /repos/:owner/:repo/import/lfs"][2]>
       >;
@@ -3289,7 +3914,8 @@ export type RestEndpointMethods = {
      */
     startForAuthenticatedUser: {
       (
-        params?: RequestParameters & Endpoints["POST /user/migrations"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["POST /user/migrations"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["POST /user/migrations"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3299,7 +3925,11 @@ export type RestEndpointMethods = {
      */
     startForOrg: {
       (
-        params?: RequestParameters & Endpoints["POST /orgs/:org/migrations"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["POST /orgs/:org/migrations"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["POST /orgs/:org/migrations"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3310,7 +3940,10 @@ export type RestEndpointMethods = {
     startImport: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/import"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/import"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /repos/:owner/:repo/import"][2]>
       >;
@@ -3323,7 +3956,10 @@ export type RestEndpointMethods = {
     unlockRepoForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /user/migrations/:migration_id/repos/:repo_name/lock"][0]
+          Omit<
+            Endpoints["DELETE /user/migrations/:migration_id/repos/:repo_name/lock"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /user/migrations/:migration_id/repos/:repo_name/lock"][2]
@@ -3338,7 +3974,10 @@ export type RestEndpointMethods = {
     unlockRepoForOrg: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/migrations/:migration_id/repos/:repo_name/lock"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/migrations/:migration_id/repos/:repo_name/lock"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/migrations/:migration_id/repos/:repo_name/lock"][2]
@@ -3359,7 +3998,10 @@ export type RestEndpointMethods = {
     updateImport: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/import"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/import"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PATCH /repos/:owner/:repo/import"][2]>
       >;
@@ -3382,7 +4024,10 @@ export type RestEndpointMethods = {
     addOrUpdateMembership: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /orgs/:org/memberships/:username"][0]
+          Omit<
+            Endpoints["PUT /orgs/:org/memberships/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /orgs/:org/memberships/:username"][2]>
       >;
@@ -3393,7 +4038,10 @@ export type RestEndpointMethods = {
     blockUser: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /orgs/:org/blocks/:username"][0]
+          Omit<
+            Endpoints["PUT /orgs/:org/blocks/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /orgs/:org/blocks/:username"][2]>
       >;
@@ -3408,7 +4056,10 @@ export type RestEndpointMethods = {
     checkBlockedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/blocks/:username"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/blocks/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/blocks/:username"][2]>
       >;
@@ -3421,7 +4072,10 @@ export type RestEndpointMethods = {
     checkMembership: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/members/:username"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/members/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/members/:username"][2]>
       >;
@@ -3432,7 +4086,10 @@ export type RestEndpointMethods = {
     checkPublicMembership: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/public_members/:username"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/public_members/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/public_members/:username"][2]>
       >;
@@ -3443,7 +4100,10 @@ export type RestEndpointMethods = {
     concealMembership: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/public_members/:username"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/public_members/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/public_members/:username"][2]
@@ -3458,7 +4118,10 @@ export type RestEndpointMethods = {
     convertMemberToOutsideCollaborator: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /orgs/:org/outside_collaborators/:username"][0]
+          Omit<
+            Endpoints["PUT /orgs/:org/outside_collaborators/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /orgs/:org/outside_collaborators/:username"][2]
@@ -3472,7 +4135,8 @@ export type RestEndpointMethods = {
      */
     createHook: {
       (
-        params?: RequestParameters & Endpoints["POST /orgs/:org/hooks"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["POST /orgs/:org/hooks"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["POST /orgs/:org/hooks"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3484,7 +4148,11 @@ export type RestEndpointMethods = {
      */
     createInvitation: {
       (
-        params?: RequestParameters & Endpoints["POST /orgs/:org/invitations"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["POST /orgs/:org/invitations"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["POST /orgs/:org/invitations"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3493,7 +4161,10 @@ export type RestEndpointMethods = {
     deleteHook: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/hooks/:hook_id"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/hooks/:hook_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /orgs/:org/hooks/:hook_id"][2]>
       >;
@@ -3506,9 +4177,10 @@ export type RestEndpointMethods = {
      * GitHub Apps with the `Organization plan` permission can use this endpoint to retrieve information about an organization's GitHub plan. See "[Authenticating with GitHub Apps](https://developer.github.com/apps/building-github-apps/authenticating-with-github-apps/)" for details. For an example response, see "[Response with GitHub plan information](https://developer.github.com/v3/orgs/#response-with-github-plan-information)."
      */
     get: {
-      (params?: RequestParameters & Endpoints["GET /orgs/:org"][0]): Promise<
-        OctokitResponse<Endpoints["GET /orgs/:org"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /orgs/:org"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /orgs/:org"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -3516,7 +4188,10 @@ export type RestEndpointMethods = {
     getHook: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/hooks/:hook_id"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/hooks/:hook_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/hooks/:hook_id"][2]>
       >;
@@ -3529,7 +4204,10 @@ export type RestEndpointMethods = {
     getMembership: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/memberships/:username"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/memberships/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/memberships/:username"][2]>
       >;
@@ -3540,7 +4218,10 @@ export type RestEndpointMethods = {
     getMembershipForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/memberships/orgs/:org"][0]
+          Omit<
+            Endpoints["GET /user/memberships/orgs/:org"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /user/memberships/orgs/:org"][2]>
       >;
@@ -3554,7 +4235,8 @@ export type RestEndpointMethods = {
      */
     list: {
       (
-        params?: RequestParameters & Endpoints["GET /organizations"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /organizations"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /organizations"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3564,7 +4246,8 @@ export type RestEndpointMethods = {
      */
     listBlockedUsers: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/blocks"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /orgs/:org/blocks"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/blocks"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3577,9 +4260,10 @@ export type RestEndpointMethods = {
      * This only lists organizations that your authorization allows you to operate on in some way (e.g., you can list teams with `read:org` scope, you can publicize your organization membership with `user` scope, etc.). Therefore, this API requires at least `user` or `read:org` scope. OAuth requests with insufficient scope receive a `403 Forbidden` response.
      */
     listForAuthenticatedUser: {
-      (params?: RequestParameters & Endpoints["GET /user/orgs"][0]): Promise<
-        OctokitResponse<Endpoints["GET /user/orgs"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/orgs"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /user/orgs"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -3590,7 +4274,8 @@ export type RestEndpointMethods = {
      */
     listForUser: {
       (
-        params?: RequestParameters & Endpoints["GET /users/:username/orgs"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /users/:username/orgs"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /users/:username/orgs"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3598,7 +4283,8 @@ export type RestEndpointMethods = {
 
     listHooks: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/hooks"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /orgs/:org/hooks"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/hooks"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3609,7 +4295,10 @@ export type RestEndpointMethods = {
     listInstallations: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/installations"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/installations"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/installations"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3620,7 +4309,10 @@ export type RestEndpointMethods = {
     listInvitationTeams: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/invitations/:invitation_id/teams"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/invitations/:invitation_id/teams"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/invitations/:invitation_id/teams"][2]
@@ -3634,7 +4326,8 @@ export type RestEndpointMethods = {
      */
     listMembers: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/members"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /orgs/:org/members"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/members"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3642,7 +4335,11 @@ export type RestEndpointMethods = {
 
     listMemberships: {
       (
-        params?: RequestParameters & Endpoints["GET /user/memberships/orgs"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /user/memberships/orgs"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /user/memberships/orgs"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3653,7 +4350,10 @@ export type RestEndpointMethods = {
     listOutsideCollaborators: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/outside_collaborators"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/outside_collaborators"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/outside_collaborators"][2]>
       >;
@@ -3665,7 +4365,11 @@ export type RestEndpointMethods = {
      */
     listPendingInvitations: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/invitations"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /orgs/:org/invitations"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/invitations"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3676,7 +4380,10 @@ export type RestEndpointMethods = {
     listPublicMembers: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/public_members"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/public_members"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/public_members"][2]>
       >;
@@ -3689,7 +4396,10 @@ export type RestEndpointMethods = {
     pingHook: {
       (
         params?: RequestParameters &
-          Endpoints["POST /orgs/:org/hooks/:hook_id/pings"][0]
+          Omit<
+            Endpoints["POST /orgs/:org/hooks/:hook_id/pings"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /orgs/:org/hooks/:hook_id/pings"][2]>
       >;
@@ -3704,7 +4414,10 @@ export type RestEndpointMethods = {
     publicizeMembership: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /orgs/:org/public_members/:username"][0]
+          Omit<
+            Endpoints["PUT /orgs/:org/public_members/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /orgs/:org/public_members/:username"][2]>
       >;
@@ -3717,7 +4430,10 @@ export type RestEndpointMethods = {
     removeMember: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/members/:username"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/members/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /orgs/:org/members/:username"][2]>
       >;
@@ -3732,7 +4448,10 @@ export type RestEndpointMethods = {
     removeMembership: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/memberships/:username"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/memberships/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /orgs/:org/memberships/:username"][2]>
       >;
@@ -3745,7 +4464,10 @@ export type RestEndpointMethods = {
     removeOutsideCollaborator: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/outside_collaborators/:username"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/outside_collaborators/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/outside_collaborators/:username"][2]
@@ -3758,7 +4480,10 @@ export type RestEndpointMethods = {
     unblockUser: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/blocks/:username"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/blocks/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /orgs/:org/blocks/:username"][2]>
       >;
@@ -3771,9 +4496,10 @@ export type RestEndpointMethods = {
      * Enables an authenticated organization owner with the `admin:org` scope to update the organization's profile and member privileges.
      */
     update: {
-      (params?: RequestParameters & Endpoints["PATCH /orgs/:org"][0]): Promise<
-        OctokitResponse<Endpoints["PATCH /orgs/:org"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["PATCH /orgs/:org"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["PATCH /orgs/:org"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -3781,7 +4507,10 @@ export type RestEndpointMethods = {
     updateHook: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /orgs/:org/hooks/:hook_id"][0]
+          Omit<
+            Endpoints["PATCH /orgs/:org/hooks/:hook_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PATCH /orgs/:org/hooks/:hook_id"][2]>
       >;
@@ -3792,7 +4521,10 @@ export type RestEndpointMethods = {
     updateMembership: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /user/memberships/orgs/:org"][0]
+          Omit<
+            Endpoints["PATCH /user/memberships/orgs/:org"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PATCH /user/memberships/orgs/:org"][2]>
       >;
@@ -3807,7 +4539,10 @@ export type RestEndpointMethods = {
     addCollaborator: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /projects/:project_id/collaborators/:username"][0]
+          Omit<
+            Endpoints["PUT /projects/:project_id/collaborators/:username"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /projects/:project_id/collaborators/:username"][2]
@@ -3824,7 +4559,10 @@ export type RestEndpointMethods = {
     createCard: {
       (
         params?: RequestParameters &
-          Endpoints["POST /projects/columns/:column_id/cards"][0]
+          Omit<
+            Endpoints["POST /projects/columns/:column_id/cards"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["POST /projects/columns/:column_id/cards"][2]>
       >;
@@ -3835,7 +4573,10 @@ export type RestEndpointMethods = {
     createColumn: {
       (
         params?: RequestParameters &
-          Endpoints["POST /projects/:project_id/columns"][0]
+          Omit<
+            Endpoints["POST /projects/:project_id/columns"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["POST /projects/:project_id/columns"][2]>
       >;
@@ -3845,7 +4586,10 @@ export type RestEndpointMethods = {
 
     createForAuthenticatedUser: {
       (
-        params?: RequestParameters & Endpoints["POST /user/projects"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["POST /user/projects"][0], "baseUrl" | "headers"> & {
+            mediaType: { previews: string[] };
+          }
       ): Promise<OctokitResponse<Endpoints["POST /user/projects"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3855,7 +4599,11 @@ export type RestEndpointMethods = {
      */
     createForOrg: {
       (
-        params?: RequestParameters & Endpoints["POST /orgs/:org/projects"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["POST /orgs/:org/projects"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["POST /orgs/:org/projects"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3866,7 +4614,10 @@ export type RestEndpointMethods = {
     createForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/projects"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/projects"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/projects"][2]>
       >;
@@ -3879,7 +4630,10 @@ export type RestEndpointMethods = {
     delete: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /projects/:project_id"][0]
+          Omit<
+            Endpoints["DELETE /projects/:project_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["DELETE /projects/:project_id"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3888,7 +4642,10 @@ export type RestEndpointMethods = {
     deleteCard: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /projects/columns/cards/:card_id"][0]
+          Omit<
+            Endpoints["DELETE /projects/columns/cards/:card_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["DELETE /projects/columns/cards/:card_id"][2]>
       >;
@@ -3899,7 +4656,10 @@ export type RestEndpointMethods = {
     deleteColumn: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /projects/columns/:column_id"][0]
+          Omit<
+            Endpoints["DELETE /projects/columns/:column_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["DELETE /projects/columns/:column_id"][2]>
       >;
@@ -3911,7 +4671,11 @@ export type RestEndpointMethods = {
      */
     get: {
       (
-        params?: RequestParameters & Endpoints["GET /projects/:project_id"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /projects/:project_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["GET /projects/:project_id"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3920,7 +4684,10 @@ export type RestEndpointMethods = {
     getCard: {
       (
         params?: RequestParameters &
-          Endpoints["GET /projects/columns/cards/:card_id"][0]
+          Omit<
+            Endpoints["GET /projects/columns/cards/:card_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /projects/columns/cards/:card_id"][2]>
       >;
@@ -3931,7 +4698,10 @@ export type RestEndpointMethods = {
     getColumn: {
       (
         params?: RequestParameters &
-          Endpoints["GET /projects/columns/:column_id"][0]
+          Omit<
+            Endpoints["GET /projects/columns/:column_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /projects/columns/:column_id"][2]>
       >;
@@ -3942,7 +4712,10 @@ export type RestEndpointMethods = {
     listCards: {
       (
         params?: RequestParameters &
-          Endpoints["GET /projects/columns/:column_id/cards"][0]
+          Omit<
+            Endpoints["GET /projects/columns/:column_id/cards"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /projects/columns/:column_id/cards"][2]>
       >;
@@ -3955,7 +4728,10 @@ export type RestEndpointMethods = {
     listCollaborators: {
       (
         params?: RequestParameters &
-          Endpoints["GET /projects/:project_id/collaborators"][0]
+          Omit<
+            Endpoints["GET /projects/:project_id/collaborators"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /projects/:project_id/collaborators"][2]>
       >;
@@ -3966,7 +4742,10 @@ export type RestEndpointMethods = {
     listColumns: {
       (
         params?: RequestParameters &
-          Endpoints["GET /projects/:project_id/columns"][0]
+          Omit<
+            Endpoints["GET /projects/:project_id/columns"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /projects/:project_id/columns"][2]>
       >;
@@ -3980,7 +4759,11 @@ export type RestEndpointMethods = {
      */
     listForOrg: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/projects"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /orgs/:org/projects"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/projects"][2]>>;
 
       endpoint: EndpointInterface;
@@ -3991,7 +4774,10 @@ export type RestEndpointMethods = {
     listForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/projects"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/projects"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/projects"][2]>
       >;
@@ -4002,7 +4788,10 @@ export type RestEndpointMethods = {
     listForUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/projects"][0]
+          Omit<
+            Endpoints["GET /users/:username/projects"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/projects"][2]>
       >;
@@ -4013,7 +4802,10 @@ export type RestEndpointMethods = {
     moveCard: {
       (
         params?: RequestParameters &
-          Endpoints["POST /projects/columns/cards/:card_id/moves"][0]
+          Omit<
+            Endpoints["POST /projects/columns/cards/:card_id/moves"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /projects/columns/cards/:card_id/moves"][2]
@@ -4026,7 +4818,10 @@ export type RestEndpointMethods = {
     moveColumn: {
       (
         params?: RequestParameters &
-          Endpoints["POST /projects/columns/:column_id/moves"][0]
+          Omit<
+            Endpoints["POST /projects/columns/:column_id/moves"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["POST /projects/columns/:column_id/moves"][2]>
       >;
@@ -4039,7 +4834,10 @@ export type RestEndpointMethods = {
     removeCollaborator: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /projects/:project_id/collaborators/:username"][0]
+          Omit<
+            Endpoints["DELETE /projects/:project_id/collaborators/:username"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /projects/:project_id/collaborators/:username"][2]
@@ -4054,7 +4852,10 @@ export type RestEndpointMethods = {
     reviewUserPermissionLevel: {
       (
         params?: RequestParameters &
-          Endpoints["GET /projects/:project_id/collaborators/:username/permission"][0]
+          Omit<
+            Endpoints["GET /projects/:project_id/collaborators/:username/permission"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /projects/:project_id/collaborators/:username/permission"][2]
@@ -4068,7 +4869,11 @@ export type RestEndpointMethods = {
      */
     update: {
       (
-        params?: RequestParameters & Endpoints["PATCH /projects/:project_id"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["PATCH /projects/:project_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<OctokitResponse<Endpoints["PATCH /projects/:project_id"][2]>>;
 
       endpoint: EndpointInterface;
@@ -4077,7 +4882,10 @@ export type RestEndpointMethods = {
     updateCard: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /projects/columns/cards/:card_id"][0]
+          Omit<
+            Endpoints["PATCH /projects/columns/cards/:card_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["PATCH /projects/columns/cards/:card_id"][2]>
       >;
@@ -4088,7 +4896,10 @@ export type RestEndpointMethods = {
     updateColumn: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /projects/columns/:column_id"][0]
+          Omit<
+            Endpoints["PATCH /projects/columns/:column_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["PATCH /projects/columns/:column_id"][2]>
       >;
@@ -4100,7 +4911,10 @@ export type RestEndpointMethods = {
     checkIfMerged: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/merge"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/merge"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/merge"][2]
@@ -4121,7 +4935,10 @@ export type RestEndpointMethods = {
     create: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/pulls"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/pulls"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/pulls"][2]>
       >;
@@ -4158,7 +4975,10 @@ export type RestEndpointMethods = {
     createComment: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/comments"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/comments"][2]
@@ -4177,7 +4997,10 @@ export type RestEndpointMethods = {
     createReview: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/reviews"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/reviews"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/reviews"][2]
@@ -4194,7 +5017,10 @@ export type RestEndpointMethods = {
     createReviewCommentReply: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/comments/:comment_id/replies"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/comments/:comment_id/replies"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/comments/:comment_id/replies"][2]
@@ -4209,7 +5035,10 @@ export type RestEndpointMethods = {
     createReviewRequest: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"][2]
@@ -4224,7 +5053,10 @@ export type RestEndpointMethods = {
     deleteComment: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/pulls/comments/:comment_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/pulls/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/pulls/comments/:comment_id"][2]
@@ -4237,7 +5069,10 @@ export type RestEndpointMethods = {
     deletePendingReview: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"][2]
@@ -4250,7 +5085,10 @@ export type RestEndpointMethods = {
     deleteReviewRequest: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"][2]
@@ -4265,7 +5103,10 @@ export type RestEndpointMethods = {
     dismissReview: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/dismissals"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/dismissals"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/dismissals"][2]
@@ -4294,7 +5135,10 @@ export type RestEndpointMethods = {
     get: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/:pull_number"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/:pull_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number"][2]
@@ -4329,7 +5173,10 @@ export type RestEndpointMethods = {
     getComment: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/comments/:comment_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/comments/:comment_id"][2]
@@ -4342,7 +5189,10 @@ export type RestEndpointMethods = {
     getCommentsForReview: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/comments"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/comments"][2]
@@ -4355,7 +5205,10 @@ export type RestEndpointMethods = {
     getReview: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"][2]
@@ -4370,7 +5223,10 @@ export type RestEndpointMethods = {
     list: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/pulls"][2]>
       >;
@@ -4403,7 +5259,10 @@ export type RestEndpointMethods = {
     listComments: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/comments"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/comments"][2]
@@ -4438,7 +5297,10 @@ export type RestEndpointMethods = {
     listCommentsForRepo: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/comments"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/pulls/comments"][2]>
       >;
@@ -4451,7 +5313,10 @@ export type RestEndpointMethods = {
     listCommits: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/commits"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/commits"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/commits"][2]
@@ -4466,7 +5331,10 @@ export type RestEndpointMethods = {
     listFiles: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/files"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/files"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/files"][2]
@@ -4479,7 +5347,10 @@ export type RestEndpointMethods = {
     listReviewRequests: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"][2]
@@ -4494,7 +5365,10 @@ export type RestEndpointMethods = {
     listReviews: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews"][2]
@@ -4509,7 +5383,10 @@ export type RestEndpointMethods = {
     merge: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/merge"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/merge"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/merge"][2]
@@ -4522,7 +5399,10 @@ export type RestEndpointMethods = {
     submitReview: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/events"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/events"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/events"][2]
@@ -4539,7 +5419,10 @@ export type RestEndpointMethods = {
     update: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/pulls/:pull_number"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/pulls/:pull_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/pulls/:pull_number"][2]
@@ -4554,7 +5437,10 @@ export type RestEndpointMethods = {
     updateBranch: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/update-branch"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/update-branch"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/update-branch"][2]
@@ -4587,7 +5473,10 @@ export type RestEndpointMethods = {
     updateComment: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/pulls/comments/:comment_id"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/pulls/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/pulls/comments/:comment_id"][2]
@@ -4602,7 +5491,10 @@ export type RestEndpointMethods = {
     updateReview: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"][2]
@@ -4634,9 +5526,10 @@ export type RestEndpointMethods = {
      * If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
      */
     get: {
-      (params?: RequestParameters & Endpoints["GET /rate_limit"][0]): Promise<
-        OctokitResponse<Endpoints["GET /rate_limit"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /rate_limit"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /rate_limit"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -4648,7 +5541,10 @@ export type RestEndpointMethods = {
     createForCommitComment: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/comments/:comment_id/reactions"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/comments/:comment_id/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/comments/:comment_id/reactions"][2]
@@ -4663,7 +5559,10 @@ export type RestEndpointMethods = {
     createForIssue: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/issues/:issue_number/reactions"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/issues/:issue_number/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/issues/:issue_number/reactions"][2]
@@ -4678,7 +5577,10 @@ export type RestEndpointMethods = {
     createForIssueComment: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/issues/comments/:comment_id/reactions"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/issues/comments/:comment_id/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/issues/comments/:comment_id/reactions"][2]
@@ -4693,7 +5595,10 @@ export type RestEndpointMethods = {
     createForPullRequestReviewComment: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/pulls/comments/:comment_id/reactions"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/pulls/comments/:comment_id/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/pulls/comments/:comment_id/reactions"][2]
@@ -4710,7 +5615,10 @@ export type RestEndpointMethods = {
     createForTeamDiscussionCommentInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions"][0]
+          Omit<
+            Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions"][2]
@@ -4727,7 +5635,10 @@ export type RestEndpointMethods = {
     createForTeamDiscussionInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions"][0]
+          Omit<
+            Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions"][2]
@@ -4745,7 +5656,10 @@ export type RestEndpointMethods = {
     delete: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /reactions/:reaction_id"][0]
+          Omit<
+            Endpoints["DELETE /reactions/:reaction_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["DELETE /reactions/:reaction_id"][2]>
       >;
@@ -4760,7 +5674,10 @@ export type RestEndpointMethods = {
     deleteForCommitComment: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id"][2]
@@ -4777,7 +5694,10 @@ export type RestEndpointMethods = {
     deleteForIssue: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id"][2]
@@ -4794,7 +5714,10 @@ export type RestEndpointMethods = {
     deleteForIssueComment: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id"][2]
@@ -4811,7 +5734,10 @@ export type RestEndpointMethods = {
     deleteForPullRequestComment: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id"][2]
@@ -4828,7 +5754,10 @@ export type RestEndpointMethods = {
     deleteForTeamDiscussion: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id"][2]
@@ -4845,7 +5774,10 @@ export type RestEndpointMethods = {
     deleteForTeamDiscussionComment: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id"][2]
@@ -4863,7 +5795,10 @@ export type RestEndpointMethods = {
     deleteLegacy: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /reactions/:reaction_id"][0]
+          Omit<
+            Endpoints["DELETE /reactions/:reaction_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["DELETE /reactions/:reaction_id"][2]>
       >;
@@ -4876,7 +5811,10 @@ export type RestEndpointMethods = {
     listForCommitComment: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/comments/:comment_id/reactions"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/comments/:comment_id/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/comments/:comment_id/reactions"][2]
@@ -4891,7 +5829,10 @@ export type RestEndpointMethods = {
     listForIssue: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/:issue_number/reactions"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/:issue_number/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number/reactions"][2]
@@ -4906,7 +5847,10 @@ export type RestEndpointMethods = {
     listForIssueComment: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/issues/comments/:comment_id/reactions"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/issues/comments/:comment_id/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/issues/comments/:comment_id/reactions"][2]
@@ -4921,7 +5865,10 @@ export type RestEndpointMethods = {
     listForPullRequestReviewComment: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pulls/comments/:comment_id/reactions"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pulls/comments/:comment_id/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pulls/comments/:comment_id/reactions"][2]
@@ -4938,7 +5885,10 @@ export type RestEndpointMethods = {
     listForTeamDiscussionCommentInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions"][2]
@@ -4955,7 +5905,10 @@ export type RestEndpointMethods = {
     listForTeamDiscussionInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions"][2]
@@ -4969,7 +5922,10 @@ export type RestEndpointMethods = {
     acceptInvitation: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /user/repository_invitations/:invitation_id"][0]
+          Omit<
+            Endpoints["PATCH /user/repository_invitations/:invitation_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /user/repository_invitations/:invitation_id"][2]
@@ -4994,7 +5950,10 @@ export type RestEndpointMethods = {
     addCollaborator: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/collaborators/:username"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/collaborators/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/collaborators/:username"][2]
@@ -5009,7 +5968,10 @@ export type RestEndpointMethods = {
     addDeployKey: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/keys"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/keys"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/keys"][2]>
       >;
@@ -5024,7 +5986,10 @@ export type RestEndpointMethods = {
     addProtectedBranchAdminEnforcement: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/enforce_admins"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/enforce_admins"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/enforce_admins"][2]
@@ -5045,7 +6010,10 @@ export type RestEndpointMethods = {
     addProtectedBranchAppRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][2]
@@ -5062,7 +6030,10 @@ export type RestEndpointMethods = {
     addProtectedBranchRequiredSignatures: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/required_signatures"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/required_signatures"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/required_signatures"][2]
@@ -5077,7 +6048,10 @@ export type RestEndpointMethods = {
     addProtectedBranchRequiredStatusChecksContexts: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][2]
@@ -5098,7 +6072,10 @@ export type RestEndpointMethods = {
     addProtectedBranchTeamRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][2]
@@ -5119,7 +6096,10 @@ export type RestEndpointMethods = {
     addProtectedBranchUserRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][2]
@@ -5136,7 +6116,10 @@ export type RestEndpointMethods = {
     checkCollaborator: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/collaborators/:username"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/collaborators/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/collaborators/:username"][2]
@@ -5151,7 +6134,10 @@ export type RestEndpointMethods = {
     checkVulnerabilityAlerts: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/vulnerability-alerts"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/vulnerability-alerts"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/vulnerability-alerts"][2]
@@ -5198,7 +6184,10 @@ export type RestEndpointMethods = {
     compareCommits: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/compare/:base...{head}"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/compare/:base...{head}"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/compare/:base...{head}"][2]
@@ -5215,7 +6204,10 @@ export type RestEndpointMethods = {
     createCommitComment: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/commits/:commit_sha/comments"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/commits/:commit_sha/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/commits/:commit_sha/comments"][2]
@@ -5260,7 +6252,10 @@ export type RestEndpointMethods = {
     createDeployment: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/deployments"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/deployments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/deployments"][2]>
       >;
@@ -5275,7 +6270,10 @@ export type RestEndpointMethods = {
     createDeploymentStatus: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/deployments/:deployment_id/statuses"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/deployments/:deployment_id/statuses"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/deployments/:deployment_id/statuses"][2]
@@ -5296,7 +6294,10 @@ export type RestEndpointMethods = {
     createDispatchEvent: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/dispatches"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/dispatches"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/dispatches"][2]>
       >;
@@ -5314,9 +6315,10 @@ export type RestEndpointMethods = {
      * *   `repo` scope to create a private repository
      */
     createForAuthenticatedUser: {
-      (params?: RequestParameters & Endpoints["POST /user/repos"][0]): Promise<
-        OctokitResponse<Endpoints["POST /user/repos"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["POST /user/repos"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["POST /user/repos"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -5328,7 +6330,10 @@ export type RestEndpointMethods = {
     createFork: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/forks"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/forks"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/forks"][2]>
       >;
@@ -5343,7 +6348,10 @@ export type RestEndpointMethods = {
     createHook: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/hooks"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/hooks"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/hooks"][2]>
       >;
@@ -5362,7 +6370,8 @@ export type RestEndpointMethods = {
      */
     createInOrg: {
       (
-        params?: RequestParameters & Endpoints["POST /orgs/:org/repos"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["POST /orgs/:org/repos"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["POST /orgs/:org/repos"][2]>>;
 
       endpoint: EndpointInterface;
@@ -5373,7 +6382,10 @@ export type RestEndpointMethods = {
     createOrUpdateFile: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/contents/:path"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/contents/:path"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /repos/:owner/:repo/contents/:path"][2]>
       >;
@@ -5388,7 +6400,10 @@ export type RestEndpointMethods = {
     createRelease: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/releases"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/releases"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/releases"][2]>
       >;
@@ -5403,7 +6418,10 @@ export type RestEndpointMethods = {
     createStatus: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/statuses/:sha"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/statuses/:sha"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/statuses/:sha"][2]>
       >;
@@ -5425,7 +6443,10 @@ export type RestEndpointMethods = {
     createUsingTemplate: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:template_owner/:template_repo/generate"][0]
+          Omit<
+            Endpoints["POST /repos/:template_owner/:template_repo/generate"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:template_owner/:template_repo/generate"][2]
@@ -5438,7 +6459,10 @@ export type RestEndpointMethods = {
     declineInvitation: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /user/repository_invitations/:invitation_id"][0]
+          Omit<
+            Endpoints["DELETE /user/repository_invitations/:invitation_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /user/repository_invitations/:invitation_id"][2]
@@ -5454,7 +6478,11 @@ export type RestEndpointMethods = {
      */
     delete: {
       (
-        params?: RequestParameters & Endpoints["DELETE /repos/:owner/:repo"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["DELETE /repos/:owner/:repo"][2]>>;
 
       endpoint: EndpointInterface;
@@ -5463,7 +6491,10 @@ export type RestEndpointMethods = {
     deleteCommitComment: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/comments/:comment_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/comments/:comment_id"][2]
@@ -5485,7 +6516,10 @@ export type RestEndpointMethods = {
     deleteDeployment: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/deployments/:deployment_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/deployments/:deployment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/deployments/:deployment_id"][2]
@@ -5498,7 +6532,10 @@ export type RestEndpointMethods = {
     deleteDownload: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/downloads/:download_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/downloads/:download_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/downloads/:download_id"][2]
@@ -5519,7 +6556,10 @@ export type RestEndpointMethods = {
     deleteFile: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/contents/:path"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/contents/:path"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/contents/:path"][2]
@@ -5532,7 +6572,10 @@ export type RestEndpointMethods = {
     deleteHook: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/hooks/:hook_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/hooks/:hook_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/hooks/:hook_id"][2]
@@ -5545,7 +6588,10 @@ export type RestEndpointMethods = {
     deleteInvitation: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/invitations/:invitation_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/invitations/:invitation_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/invitations/:invitation_id"][2]
@@ -5560,7 +6606,10 @@ export type RestEndpointMethods = {
     deleteRelease: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/releases/:release_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/releases/:release_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/releases/:release_id"][2]
@@ -5573,7 +6622,10 @@ export type RestEndpointMethods = {
     deleteReleaseAsset: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/releases/assets/:asset_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/releases/assets/:asset_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/releases/assets/:asset_id"][2]
@@ -5588,7 +6640,10 @@ export type RestEndpointMethods = {
     disableAutomatedSecurityFixes: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/automated-security-fixes"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/automated-security-fixes"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/automated-security-fixes"][2]
@@ -5601,7 +6656,10 @@ export type RestEndpointMethods = {
     disablePagesSite: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/pages"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/pages"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["DELETE /repos/:owner/:repo/pages"][2]>
       >;
@@ -5614,7 +6672,10 @@ export type RestEndpointMethods = {
     disableVulnerabilityAlerts: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/vulnerability-alerts"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/vulnerability-alerts"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/vulnerability-alerts"][2]
@@ -5629,7 +6690,10 @@ export type RestEndpointMethods = {
     enableAutomatedSecurityFixes: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/automated-security-fixes"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/automated-security-fixes"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/automated-security-fixes"][2]
@@ -5642,7 +6706,10 @@ export type RestEndpointMethods = {
     enablePagesSite: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/pages"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/pages"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/pages"][2]>
       >;
@@ -5655,7 +6722,10 @@ export type RestEndpointMethods = {
     enableVulnerabilityAlerts: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/vulnerability-alerts"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/vulnerability-alerts"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/vulnerability-alerts"][2]
@@ -5671,7 +6741,8 @@ export type RestEndpointMethods = {
      */
     get: {
       (
-        params?: RequestParameters & Endpoints["GET /repos/:owner/:repo"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /repos/:owner/:repo"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /repos/:owner/:repo"][2]>>;
 
       endpoint: EndpointInterface;
@@ -5680,7 +6751,10 @@ export type RestEndpointMethods = {
     getAllTopics: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/topics"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/topics"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/topics"][2]>
       >;
@@ -5695,7 +6769,10 @@ export type RestEndpointMethods = {
     getAppsWithAccessToProtectedBranch: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][2]
@@ -5714,7 +6791,10 @@ export type RestEndpointMethods = {
     getArchiveLink: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/:archive_format/:ref"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/:archive_format/:ref"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/:archive_format/:ref"][2]
@@ -5727,7 +6807,10 @@ export type RestEndpointMethods = {
     getBranch: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch"][2]
@@ -5742,7 +6825,10 @@ export type RestEndpointMethods = {
     getBranchProtection: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch/protection"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch/protection"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection"][2]
@@ -5757,7 +6843,10 @@ export type RestEndpointMethods = {
     getClones: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/traffic/clones"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/traffic/clones"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/traffic/clones"][2]>
       >;
@@ -5770,7 +6859,10 @@ export type RestEndpointMethods = {
     getCodeFrequencyStats: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/stats/code_frequency"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/stats/code_frequency"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/stats/code_frequency"][2]
@@ -5785,7 +6877,10 @@ export type RestEndpointMethods = {
     getCollaboratorPermissionLevel: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/collaborators/:username/permission"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/collaborators/:username/permission"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/collaborators/:username/permission"][2]
@@ -5808,7 +6903,10 @@ export type RestEndpointMethods = {
     getCombinedStatusForRef: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/commits/:ref/status"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/commits/:ref/status"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/commits/:ref/status"][2]
@@ -5849,7 +6947,10 @@ export type RestEndpointMethods = {
     getCommit: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/commits/:ref"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/commits/:ref"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/commits/:ref"][2]>
       >;
@@ -5862,7 +6963,10 @@ export type RestEndpointMethods = {
     getCommitActivityStats: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/stats/commit_activity"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/stats/commit_activity"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/stats/commit_activity"][2]
@@ -5875,7 +6979,10 @@ export type RestEndpointMethods = {
     getCommitComment: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/comments/:comment_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/comments/:comment_id"][2]
@@ -5910,7 +7017,10 @@ export type RestEndpointMethods = {
     getContents: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/contents/:path"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/contents/:path"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/contents/:path"][2]>
       >;
@@ -5930,7 +7040,10 @@ export type RestEndpointMethods = {
     getContributorsStats: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/stats/contributors"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/stats/contributors"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/stats/contributors"][2]
@@ -5943,7 +7056,10 @@ export type RestEndpointMethods = {
     getDeployKey: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/keys/:key_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/keys/:key_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/keys/:key_id"][2]>
       >;
@@ -5954,7 +7070,10 @@ export type RestEndpointMethods = {
     getDeployment: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id"][2]
@@ -5969,7 +7088,10 @@ export type RestEndpointMethods = {
     getDeploymentStatus: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id"][2]
@@ -5982,7 +7104,10 @@ export type RestEndpointMethods = {
     getDownload: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/downloads/:download_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/downloads/:download_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/downloads/:download_id"][2]
@@ -5995,7 +7120,10 @@ export type RestEndpointMethods = {
     getHook: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/hooks/:hook_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/hooks/:hook_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/hooks/:hook_id"][2]>
       >;
@@ -6006,7 +7134,10 @@ export type RestEndpointMethods = {
     getLatestPagesBuild: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pages/builds/latest"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pages/builds/latest"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pages/builds/latest"][2]
@@ -6023,7 +7154,10 @@ export type RestEndpointMethods = {
     getLatestRelease: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/releases/latest"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/releases/latest"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/releases/latest"][2]>
       >;
@@ -6034,7 +7168,10 @@ export type RestEndpointMethods = {
     getPages: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pages"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pages"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/pages"][2]>
       >;
@@ -6045,7 +7182,10 @@ export type RestEndpointMethods = {
     getPagesBuild: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pages/builds/:build_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pages/builds/:build_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/pages/builds/:build_id"][2]
@@ -6062,7 +7202,10 @@ export type RestEndpointMethods = {
     getParticipationStats: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/stats/participation"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/stats/participation"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/stats/participation"][2]
@@ -6077,7 +7220,10 @@ export type RestEndpointMethods = {
     getProtectedBranchAdminEnforcement: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/enforce_admins"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/enforce_admins"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/enforce_admins"][2]
@@ -6092,7 +7238,10 @@ export type RestEndpointMethods = {
     getProtectedBranchPullRequestReviewEnforcement: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"][2]
@@ -6111,7 +7260,10 @@ export type RestEndpointMethods = {
     getProtectedBranchRequiredSignatures: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_signatures"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_signatures"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_signatures"][2]
@@ -6126,7 +7278,10 @@ export type RestEndpointMethods = {
     getProtectedBranchRequiredStatusChecks: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks"][2]
@@ -6145,7 +7300,10 @@ export type RestEndpointMethods = {
     getProtectedBranchRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions"][2]
@@ -6166,7 +7324,10 @@ export type RestEndpointMethods = {
     getPunchCardStats: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/stats/punch_card"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/stats/punch_card"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/stats/punch_card"][2]
@@ -6183,7 +7344,10 @@ export type RestEndpointMethods = {
     getReadme: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/readme"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/readme"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/readme"][2]>
       >;
@@ -6196,7 +7360,10 @@ export type RestEndpointMethods = {
     getRelease: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/releases/:release_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/releases/:release_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/releases/:release_id"][2]
@@ -6211,7 +7378,10 @@ export type RestEndpointMethods = {
     getReleaseAsset: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/releases/assets/:asset_id"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/releases/assets/:asset_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/releases/assets/:asset_id"][2]
@@ -6226,7 +7396,10 @@ export type RestEndpointMethods = {
     getReleaseByTag: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/releases/tags/:tag"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/releases/tags/:tag"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/releases/tags/:tag"][2]
@@ -6243,7 +7416,10 @@ export type RestEndpointMethods = {
     getTeamsWithAccessToProtectedBranch: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][2]
@@ -6258,7 +7434,10 @@ export type RestEndpointMethods = {
     getTopPaths: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/traffic/popular/paths"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/traffic/popular/paths"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/traffic/popular/paths"][2]
@@ -6273,7 +7452,10 @@ export type RestEndpointMethods = {
     getTopReferrers: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/traffic/popular/referrers"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/traffic/popular/referrers"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/traffic/popular/referrers"][2]
@@ -6290,7 +7472,10 @@ export type RestEndpointMethods = {
     getUsersWithAccessToProtectedBranch: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][2]
@@ -6305,7 +7490,10 @@ export type RestEndpointMethods = {
     getViews: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/traffic/views"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/traffic/views"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/traffic/views"][2]>
       >;
@@ -6319,9 +7507,10 @@ export type RestEndpointMethods = {
      * @deprecated octokit.repos.list() has been renamed to octokit.repos.listForAuthenticatedUser() (2020-03-04)
      */
     list: {
-      (params?: RequestParameters & Endpoints["GET /user/repos"][0]): Promise<
-        OctokitResponse<Endpoints["GET /user/repos"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/repos"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /user/repos"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -6329,7 +7518,10 @@ export type RestEndpointMethods = {
     listAssetsForRelease: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/releases/:release_id/assets"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/releases/:release_id/assets"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/releases/:release_id/assets"][2]
@@ -6342,7 +7534,10 @@ export type RestEndpointMethods = {
     listBranches: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/branches"][2]>
       >;
@@ -6357,7 +7552,10 @@ export type RestEndpointMethods = {
     listBranchesForHeadCommit: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/branches-where-head"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/branches-where-head"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/branches-where-head"][2]
@@ -6374,7 +7572,10 @@ export type RestEndpointMethods = {
     listCollaborators: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/collaborators"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/collaborators"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/collaborators"][2]>
       >;
@@ -6387,7 +7588,10 @@ export type RestEndpointMethods = {
     listCommentsForCommit: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/comments"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/comments"][2]
@@ -6404,7 +7608,10 @@ export type RestEndpointMethods = {
     listCommitComments: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/comments"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/comments"][2]>
       >;
@@ -6437,7 +7644,10 @@ export type RestEndpointMethods = {
     listCommits: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/commits"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/commits"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/commits"][2]>
       >;
@@ -6452,7 +7662,10 @@ export type RestEndpointMethods = {
     listContributors: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/contributors"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/contributors"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/contributors"][2]>
       >;
@@ -6463,7 +7676,10 @@ export type RestEndpointMethods = {
     listDeployKeys: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/keys"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/keys"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /repos/:owner/:repo/keys"][2]>>;
 
       endpoint: EndpointInterface;
@@ -6474,7 +7690,10 @@ export type RestEndpointMethods = {
     listDeploymentStatuses: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id/statuses"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id/statuses"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id/statuses"][2]
@@ -6489,7 +7708,10 @@ export type RestEndpointMethods = {
     listDeployments: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/deployments"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/deployments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/deployments"][2]>
       >;
@@ -6500,7 +7722,10 @@ export type RestEndpointMethods = {
     listDownloads: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/downloads"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/downloads"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/downloads"][2]>
       >;
@@ -6513,9 +7738,10 @@ export type RestEndpointMethods = {
      * The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
      */
     listForAuthenticatedUser: {
-      (params?: RequestParameters & Endpoints["GET /user/repos"][0]): Promise<
-        OctokitResponse<Endpoints["GET /user/repos"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/repos"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /user/repos"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -6524,7 +7750,8 @@ export type RestEndpointMethods = {
      */
     listForOrg: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/repos"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /orgs/:org/repos"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/repos"][2]>>;
 
       endpoint: EndpointInterface;
@@ -6534,7 +7761,11 @@ export type RestEndpointMethods = {
      */
     listForUser: {
       (
-        params?: RequestParameters & Endpoints["GET /users/:username/repos"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /users/:username/repos"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /users/:username/repos"][2]>>;
 
       endpoint: EndpointInterface;
@@ -6543,7 +7774,10 @@ export type RestEndpointMethods = {
     listForks: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/forks"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/forks"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/forks"][2]>
       >;
@@ -6554,7 +7788,10 @@ export type RestEndpointMethods = {
     listHooks: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/hooks"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/hooks"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/hooks"][2]>
       >;
@@ -6567,7 +7804,10 @@ export type RestEndpointMethods = {
     listInvitations: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/invitations"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/invitations"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/invitations"][2]>
       >;
@@ -6580,7 +7820,10 @@ export type RestEndpointMethods = {
     listInvitationsForAuthenticatedUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/repository_invitations"][0]
+          Omit<
+            Endpoints["GET /user/repository_invitations"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /user/repository_invitations"][2]>
       >;
@@ -6593,7 +7836,10 @@ export type RestEndpointMethods = {
     listLanguages: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/languages"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/languages"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/languages"][2]>
       >;
@@ -6604,7 +7850,10 @@ export type RestEndpointMethods = {
     listPagesBuilds: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/pages/builds"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/pages/builds"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/pages/builds"][2]>
       >;
@@ -6617,7 +7866,10 @@ export type RestEndpointMethods = {
     listProtectedBranchRequiredStatusChecksContexts: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][2]
@@ -6632,9 +7884,10 @@ export type RestEndpointMethods = {
      * Note: Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://developer.github.com/v3/#link-header) to get the URL for the next page of repositories.
      */
     listPublic: {
-      (params?: RequestParameters & Endpoints["GET /repositories"][0]): Promise<
-        OctokitResponse<Endpoints["GET /repositories"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /repositories"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /repositories"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -6644,7 +7897,10 @@ export type RestEndpointMethods = {
     listPullRequestsAssociatedWithCommit: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/pulls"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/pulls"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/pulls"][2]
@@ -6661,7 +7917,10 @@ export type RestEndpointMethods = {
     listReleases: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/releases"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/releases"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/releases"][2]>
       >;
@@ -6676,7 +7935,10 @@ export type RestEndpointMethods = {
     listStatusesForRef: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/commits/:ref/statuses"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/commits/:ref/statuses"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/commits/:ref/statuses"][2]
@@ -6689,7 +7951,10 @@ export type RestEndpointMethods = {
     listTags: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/tags"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/tags"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /repos/:owner/:repo/tags"][2]>>;
 
       endpoint: EndpointInterface;
@@ -6698,7 +7963,10 @@ export type RestEndpointMethods = {
     listTeams: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/teams"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/teams"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/teams"][2]>
       >;
@@ -6711,7 +7979,10 @@ export type RestEndpointMethods = {
     listTopics: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/topics"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/topics"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["GET /repos/:owner/:repo/topics"][2]>
       >;
@@ -6722,7 +7993,10 @@ export type RestEndpointMethods = {
     merge: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/merges"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/merges"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/merges"][2]>
       >;
@@ -6735,7 +8009,10 @@ export type RestEndpointMethods = {
     pingHook: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/hooks/:hook_id/pings"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/hooks/:hook_id/pings"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/hooks/:hook_id/pings"][2]
@@ -6750,7 +8027,10 @@ export type RestEndpointMethods = {
     removeBranchProtection: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection"][2]
@@ -6763,7 +8043,10 @@ export type RestEndpointMethods = {
     removeCollaborator: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/collaborators/:username"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/collaborators/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/collaborators/:username"][2]
@@ -6776,7 +8059,10 @@ export type RestEndpointMethods = {
     removeDeployKey: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/keys/:key_id"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/keys/:key_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /repos/:owner/:repo/keys/:key_id"][2]>
       >;
@@ -6791,7 +8077,10 @@ export type RestEndpointMethods = {
     removeProtectedBranchAdminEnforcement: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/enforce_admins"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/enforce_admins"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/enforce_admins"][2]
@@ -6812,7 +8101,10 @@ export type RestEndpointMethods = {
     removeProtectedBranchAppRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][2]
@@ -6827,7 +8119,10 @@ export type RestEndpointMethods = {
     removeProtectedBranchPullRequestReviewEnforcement: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"][2]
@@ -6844,7 +8139,10 @@ export type RestEndpointMethods = {
     removeProtectedBranchRequiredSignatures: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_signatures"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_signatures"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_signatures"][2]
@@ -6859,7 +8157,10 @@ export type RestEndpointMethods = {
     removeProtectedBranchRequiredStatusChecks: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks"][2]
@@ -6874,7 +8175,10 @@ export type RestEndpointMethods = {
     removeProtectedBranchRequiredStatusChecksContexts: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][2]
@@ -6891,7 +8195,10 @@ export type RestEndpointMethods = {
     removeProtectedBranchRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions"][2]
@@ -6912,7 +8219,10 @@ export type RestEndpointMethods = {
     removeProtectedBranchTeamRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][2]
@@ -6933,7 +8243,10 @@ export type RestEndpointMethods = {
     removeProtectedBranchUserRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][0]
+          Omit<
+            Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][2]
@@ -6946,7 +8259,10 @@ export type RestEndpointMethods = {
     replaceAllTopics: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/topics"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/topics"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["PUT /repos/:owner/:repo/topics"][2]>
       >;
@@ -6965,7 +8281,10 @@ export type RestEndpointMethods = {
     replaceProtectedBranchAppRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"][2]
@@ -6980,7 +8299,10 @@ export type RestEndpointMethods = {
     replaceProtectedBranchRequiredStatusChecksContexts: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"][2]
@@ -7001,7 +8323,10 @@ export type RestEndpointMethods = {
     replaceProtectedBranchTeamRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"][2]
@@ -7022,7 +8347,10 @@ export type RestEndpointMethods = {
     replaceProtectedBranchUserRestrictions: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/users"][2]
@@ -7037,7 +8365,10 @@ export type RestEndpointMethods = {
     replaceTopics: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/topics"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/topics"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<Endpoints["PUT /repos/:owner/:repo/topics"][2]>
       >;
@@ -7052,7 +8383,10 @@ export type RestEndpointMethods = {
     requestPageBuild: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/pages/builds"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/pages/builds"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/pages/builds"][2]>
       >;
@@ -7065,7 +8399,10 @@ export type RestEndpointMethods = {
     retrieveCommunityProfileMetrics: {
       (
         params?: RequestParameters &
-          Endpoints["GET /repos/:owner/:repo/community/profile"][0]
+          Omit<
+            Endpoints["GET /repos/:owner/:repo/community/profile"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /repos/:owner/:repo/community/profile"][2]
@@ -7082,7 +8419,10 @@ export type RestEndpointMethods = {
     testPushHook: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/hooks/:hook_id/tests"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/hooks/:hook_id/tests"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/hooks/:hook_id/tests"][2]
@@ -7097,7 +8437,10 @@ export type RestEndpointMethods = {
     transfer: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/transfer"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/transfer"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["POST /repos/:owner/:repo/transfer"][2]>
       >;
@@ -7109,7 +8452,8 @@ export type RestEndpointMethods = {
      */
     update: {
       (
-        params?: RequestParameters & Endpoints["PATCH /repos/:owner/:repo"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["PATCH /repos/:owner/:repo"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["PATCH /repos/:owner/:repo"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7126,7 +8470,10 @@ export type RestEndpointMethods = {
     updateBranchProtection: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection"][2]
@@ -7139,7 +8486,10 @@ export type RestEndpointMethods = {
     updateCommitComment: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/comments/:comment_id"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/comments/:comment_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/comments/:comment_id"][2]
@@ -7152,7 +8502,10 @@ export type RestEndpointMethods = {
     updateHook: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/hooks/:hook_id"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/hooks/:hook_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/hooks/:hook_id"][2]
@@ -7165,7 +8518,10 @@ export type RestEndpointMethods = {
     updateInformationAboutPagesSite: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /repos/:owner/:repo/pages"][0]
+          Omit<
+            Endpoints["PUT /repos/:owner/:repo/pages"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /repos/:owner/:repo/pages"][2]>
       >;
@@ -7176,7 +8532,10 @@ export type RestEndpointMethods = {
     updateInvitation: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/invitations/:invitation_id"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/invitations/:invitation_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/invitations/:invitation_id"][2]
@@ -7195,7 +8554,10 @@ export type RestEndpointMethods = {
     updateProtectedBranchPullRequestReviewEnforcement: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"][2]
@@ -7212,7 +8574,10 @@ export type RestEndpointMethods = {
     updateProtectedBranchRequiredStatusChecks: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/branches/:branch/protection/required_status_checks"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/branches/:branch/protection/required_status_checks"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/branches/:branch/protection/required_status_checks"][2]
@@ -7227,7 +8592,10 @@ export type RestEndpointMethods = {
     updateRelease: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/releases/:release_id"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/releases/:release_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/releases/:release_id"][2]
@@ -7242,7 +8610,10 @@ export type RestEndpointMethods = {
     updateReleaseAsset: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /repos/:owner/:repo/releases/assets/:asset_id"][0]
+          Omit<
+            Endpoints["PATCH /repos/:owner/:repo/releases/assets/:asset_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /repos/:owner/:repo/releases/assets/:asset_id"][2]
@@ -7272,7 +8643,10 @@ export type RestEndpointMethods = {
     uploadReleaseAsset: {
       (
         params?: RequestParameters &
-          Endpoints["POST /repos/:owner/:repo/releases/:release_id/assets{?name,label}"][0]
+          Omit<
+            Endpoints["POST /repos/:owner/:repo/releases/:release_id/assets{?name,label}"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /repos/:owner/:repo/releases/:release_id/assets{?name,label}"][2]
@@ -7303,9 +8677,10 @@ export type RestEndpointMethods = {
      * Here, we're searching for the keyword `addClass` within a file's contents. We're making sure that we're only looking in files where the language is JavaScript. And we're scoping the search to the `repo:jquery/jquery` repository.
      */
     code: {
-      (params?: RequestParameters & Endpoints["GET /search/code"][0]): Promise<
-        OctokitResponse<Endpoints["GET /search/code"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /search/code"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /search/code"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -7322,7 +8697,10 @@ export type RestEndpointMethods = {
      */
     commits: {
       (
-        params?: RequestParameters & Endpoints["GET /search/commits"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /search/commits"][0], "baseUrl" | "headers"> & {
+            mediaType: { previews: string[] };
+          }
       ): Promise<OctokitResponse<Endpoints["GET /search/commits"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7338,7 +8716,8 @@ export type RestEndpointMethods = {
      */
     issuesAndPullRequests: {
       (
-        params?: RequestParameters & Endpoints["GET /search/issues"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /search/issues"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /search/issues"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7354,7 +8733,8 @@ export type RestEndpointMethods = {
      */
     labels: {
       (
-        params?: RequestParameters & Endpoints["GET /search/labels"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /search/labels"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /search/labels"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7372,7 +8752,8 @@ export type RestEndpointMethods = {
      */
     repos: {
       (
-        params?: RequestParameters & Endpoints["GET /search/repositories"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /search/repositories"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /search/repositories"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7392,7 +8773,8 @@ export type RestEndpointMethods = {
      */
     topics: {
       (
-        params?: RequestParameters & Endpoints["GET /search/topics"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /search/topics"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /search/topics"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7407,9 +8789,10 @@ export type RestEndpointMethods = {
      * Here, we're looking at users with the name Tom. We're only interested in those with more than 42 repositories, and only if they have over 1,000 followers.
      */
     users: {
-      (params?: RequestParameters & Endpoints["GET /search/users"][0]): Promise<
-        OctokitResponse<Endpoints["GET /search/users"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /search/users"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /search/users"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -7431,7 +8814,10 @@ export type RestEndpointMethods = {
     addOrUpdateMembershipInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /orgs/:org/teams/:team_slug/memberships/:username"][0]
+          Omit<
+            Endpoints["PUT /orgs/:org/teams/:team_slug/memberships/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /orgs/:org/teams/:team_slug/memberships/:username"][2]
@@ -7448,7 +8834,10 @@ export type RestEndpointMethods = {
     addOrUpdateProjectInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /orgs/:org/teams/:team_slug/projects/:project_id"][0]
+          Omit<
+            Endpoints["PUT /orgs/:org/teams/:team_slug/projects/:project_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /orgs/:org/teams/:team_slug/projects/:project_id"][2]
@@ -7467,7 +8856,10 @@ export type RestEndpointMethods = {
     addOrUpdateRepoInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /orgs/:org/teams/:team_slug/repos/:owner/:repo"][0]
+          Omit<
+            Endpoints["PUT /orgs/:org/teams/:team_slug/repos/:owner/:repo"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PUT /orgs/:org/teams/:team_slug/repos/:owner/:repo"][2]
@@ -7486,7 +8878,10 @@ export type RestEndpointMethods = {
     checkManagesRepoInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/repos/:owner/:repo"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/repos/:owner/:repo"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/repos/:owner/:repo"][2]
@@ -7502,7 +8897,8 @@ export type RestEndpointMethods = {
      */
     create: {
       (
-        params?: RequestParameters & Endpoints["POST /orgs/:org/teams"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["POST /orgs/:org/teams"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["POST /orgs/:org/teams"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7517,7 +8913,10 @@ export type RestEndpointMethods = {
     createDiscussionCommentInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments"][0]
+          Omit<
+            Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments"][2]
@@ -7536,7 +8935,10 @@ export type RestEndpointMethods = {
     createDiscussionInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["POST /orgs/:org/teams/:team_slug/discussions"][0]
+          Omit<
+            Endpoints["POST /orgs/:org/teams/:team_slug/discussions"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["POST /orgs/:org/teams/:team_slug/discussions"][2]
@@ -7553,7 +8955,10 @@ export type RestEndpointMethods = {
     deleteDiscussionCommentInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"][2]
@@ -7570,7 +8975,10 @@ export type RestEndpointMethods = {
     deleteDiscussionInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number"][2]
@@ -7589,7 +8997,10 @@ export type RestEndpointMethods = {
     deleteInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/teams/:team_slug"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/teams/:team_slug"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /orgs/:org/teams/:team_slug"][2]>
       >;
@@ -7604,7 +9015,10 @@ export type RestEndpointMethods = {
     getByName: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/teams/:team_slug"][2]>
       >;
@@ -7619,7 +9033,10 @@ export type RestEndpointMethods = {
     getDiscussionCommentInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"][2]
@@ -7636,7 +9053,10 @@ export type RestEndpointMethods = {
     getDiscussionInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number"][2]
@@ -7657,7 +9077,10 @@ export type RestEndpointMethods = {
     getMembershipInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/memberships/:username"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/memberships/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/memberships/:username"][2]
@@ -7671,7 +9094,8 @@ export type RestEndpointMethods = {
      */
     list: {
       (
-        params?: RequestParameters & Endpoints["GET /orgs/:org/teams"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /orgs/:org/teams"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /orgs/:org/teams"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7684,7 +9108,10 @@ export type RestEndpointMethods = {
     listChildInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/teams"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/teams"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/teams/:team_slug/teams"][2]>
       >;
@@ -7699,7 +9126,10 @@ export type RestEndpointMethods = {
     listDiscussionCommentsInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments"][2]
@@ -7716,7 +9146,10 @@ export type RestEndpointMethods = {
     listDiscussionsInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/discussions"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/discussions"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions"][2]
@@ -7729,9 +9162,10 @@ export type RestEndpointMethods = {
      * List all of the teams across all of the organizations to which the authenticated user belongs. This method requires `user`, `repo`, or `read:org` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/) when authenticating via [OAuth](https://developer.github.com/apps/building-oauth-apps/).
      */
     listForAuthenticatedUser: {
-      (params?: RequestParameters & Endpoints["GET /user/teams"][0]): Promise<
-        OctokitResponse<Endpoints["GET /user/teams"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/teams"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /user/teams"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -7743,7 +9177,10 @@ export type RestEndpointMethods = {
     listMembersInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/members"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/members"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/teams/:team_slug/members"][2]>
       >;
@@ -7758,7 +9195,10 @@ export type RestEndpointMethods = {
     listPendingInvitationsInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/invitations"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/invitations"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/invitations"][2]
@@ -7775,7 +9215,10 @@ export type RestEndpointMethods = {
     listProjectsInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/projects"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/projects"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/projects"][2]
@@ -7792,7 +9235,10 @@ export type RestEndpointMethods = {
     listReposInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/repos"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/repos"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /orgs/:org/teams/:team_slug/repos"][2]>
       >;
@@ -7811,7 +9257,10 @@ export type RestEndpointMethods = {
     removeMembershipInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/teams/:team_slug/memberships/:username"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/teams/:team_slug/memberships/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/memberships/:username"][2]
@@ -7828,7 +9277,10 @@ export type RestEndpointMethods = {
     removeProjectInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/teams/:team_slug/projects/:project_id"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/teams/:team_slug/projects/:project_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/projects/:project_id"][2]
@@ -7845,7 +9297,10 @@ export type RestEndpointMethods = {
     removeRepoInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /orgs/:org/teams/:team_slug/repos/:owner/:repo"][0]
+          Omit<
+            Endpoints["DELETE /orgs/:org/teams/:team_slug/repos/:owner/:repo"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/repos/:owner/:repo"][2]
@@ -7862,7 +9317,10 @@ export type RestEndpointMethods = {
     reviewProjectInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["GET /orgs/:org/teams/:team_slug/projects/:project_id"][0]
+          Omit<
+            Endpoints["GET /orgs/:org/teams/:team_slug/projects/:project_id"][0],
+            "baseUrl" | "headers"
+          > & { mediaType: { previews: string[] } }
       ): Promise<
         OctokitResponse<
           Endpoints["GET /orgs/:org/teams/:team_slug/projects/:project_id"][2]
@@ -7879,7 +9337,10 @@ export type RestEndpointMethods = {
     updateDiscussionCommentInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"][0]
+          Omit<
+            Endpoints["PATCH /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"][2]
@@ -7896,7 +9357,10 @@ export type RestEndpointMethods = {
     updateDiscussionInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /orgs/:org/teams/:team_slug/discussions/:discussion_number"][0]
+          Omit<
+            Endpoints["PATCH /orgs/:org/teams/:team_slug/discussions/:discussion_number"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["PATCH /orgs/:org/teams/:team_slug/discussions/:discussion_number"][2]
@@ -7913,7 +9377,10 @@ export type RestEndpointMethods = {
     updateInOrg: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /orgs/:org/teams/:team_slug"][0]
+          Omit<
+            Endpoints["PATCH /orgs/:org/teams/:team_slug"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PATCH /orgs/:org/teams/:team_slug"][2]>
       >;
@@ -7926,16 +9393,21 @@ export type RestEndpointMethods = {
      * This endpoint is accessible with the `user` scope.
      */
     addEmails: {
-      (params?: RequestParameters & Endpoints["POST /user/emails"][0]): Promise<
-        OctokitResponse<Endpoints["POST /user/emails"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["POST /user/emails"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["POST /user/emails"][2]>>;
 
       endpoint: EndpointInterface;
     };
 
     block: {
       (
-        params?: RequestParameters & Endpoints["PUT /user/blocks/:username"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["PUT /user/blocks/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["PUT /user/blocks/:username"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7947,7 +9419,11 @@ export type RestEndpointMethods = {
      */
     checkBlocked: {
       (
-        params?: RequestParameters & Endpoints["GET /user/blocks/:username"][0]
+        params?: RequestParameters &
+          Omit<
+            Endpoints["GET /user/blocks/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["GET /user/blocks/:username"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7956,7 +9432,10 @@ export type RestEndpointMethods = {
     checkFollowing: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/following/:username"][0]
+          Omit<
+            Endpoints["GET /user/following/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /user/following/:username"][2]>
       >;
@@ -7967,7 +9446,10 @@ export type RestEndpointMethods = {
     checkFollowingForUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/following/:target_user"][0]
+          Omit<
+            Endpoints["GET /users/:username/following/:target_user"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<
           Endpoints["GET /users/:username/following/:target_user"][2]
@@ -7981,7 +9463,8 @@ export type RestEndpointMethods = {
      */
     createGpgKey: {
       (
-        params?: RequestParameters & Endpoints["POST /user/gpg_keys"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["POST /user/gpg_keys"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["POST /user/gpg_keys"][2]>>;
 
       endpoint: EndpointInterface;
@@ -7990,9 +9473,10 @@ export type RestEndpointMethods = {
      * Adds a public SSH key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
      */
     createPublicKey: {
-      (params?: RequestParameters & Endpoints["POST /user/keys"][0]): Promise<
-        OctokitResponse<Endpoints["POST /user/keys"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["POST /user/keys"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["POST /user/keys"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -8001,7 +9485,8 @@ export type RestEndpointMethods = {
      */
     deleteEmails: {
       (
-        params?: RequestParameters & Endpoints["DELETE /user/emails"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["DELETE /user/emails"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["DELETE /user/emails"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8012,7 +9497,10 @@ export type RestEndpointMethods = {
     deleteGpgKey: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /user/gpg_keys/:gpg_key_id"][0]
+          Omit<
+            Endpoints["DELETE /user/gpg_keys/:gpg_key_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /user/gpg_keys/:gpg_key_id"][2]>
       >;
@@ -8024,7 +9512,8 @@ export type RestEndpointMethods = {
      */
     deletePublicKey: {
       (
-        params?: RequestParameters & Endpoints["DELETE /user/keys/:key_id"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["DELETE /user/keys/:key_id"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["DELETE /user/keys/:key_id"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8037,7 +9526,10 @@ export type RestEndpointMethods = {
     follow: {
       (
         params?: RequestParameters &
-          Endpoints["PUT /user/following/:username"][0]
+          Omit<
+            Endpoints["PUT /user/following/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["PUT /user/following/:username"][2]>
       >;
@@ -8050,9 +9542,10 @@ export type RestEndpointMethods = {
      * Lists public profile information when authenticated through OAuth without the `user` scope.
      */
     getAuthenticated: {
-      (params?: RequestParameters & Endpoints["GET /user"][0]): Promise<
-        OctokitResponse<Endpoints["GET /user"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /user"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -8067,7 +9560,8 @@ export type RestEndpointMethods = {
      */
     getByUsername: {
       (
-        params?: RequestParameters & Endpoints["GET /users/:username"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /users/:username"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /users/:username"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8080,7 +9574,10 @@ export type RestEndpointMethods = {
     getContextForUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/hovercard"][0]
+          Omit<
+            Endpoints["GET /users/:username/hovercard"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/hovercard"][2]>
       >;
@@ -8093,7 +9590,10 @@ export type RestEndpointMethods = {
     getGpgKey: {
       (
         params?: RequestParameters &
-          Endpoints["GET /user/gpg_keys/:gpg_key_id"][0]
+          Omit<
+            Endpoints["GET /user/gpg_keys/:gpg_key_id"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /user/gpg_keys/:gpg_key_id"][2]>
       >;
@@ -8105,7 +9605,8 @@ export type RestEndpointMethods = {
      */
     getPublicKey: {
       (
-        params?: RequestParameters & Endpoints["GET /user/keys/:key_id"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/keys/:key_id"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /user/keys/:key_id"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8116,9 +9617,10 @@ export type RestEndpointMethods = {
      * Note: Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://developer.github.com/v3/#link-header) to get the URL for the next page of users.
      */
     list: {
-      (params?: RequestParameters & Endpoints["GET /users"][0]): Promise<
-        OctokitResponse<Endpoints["GET /users"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /users"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /users"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -8126,9 +9628,10 @@ export type RestEndpointMethods = {
      * List the users you've blocked on your personal account.
      */
     listBlocked: {
-      (params?: RequestParameters & Endpoints["GET /user/blocks"][0]): Promise<
-        OctokitResponse<Endpoints["GET /user/blocks"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/blocks"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /user/blocks"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -8136,9 +9639,10 @@ export type RestEndpointMethods = {
      * Lists all of your email addresses, and specifies which one is visible to the public. This endpoint is accessible with the `user:email` scope.
      */
     listEmails: {
-      (params?: RequestParameters & Endpoints["GET /user/emails"][0]): Promise<
-        OctokitResponse<Endpoints["GET /user/emails"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/emails"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /user/emails"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -8147,7 +9651,8 @@ export type RestEndpointMethods = {
      */
     listFollowedByAuthenticated: {
       (
-        params?: RequestParameters & Endpoints["GET /user/following"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/following"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /user/following"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8157,7 +9662,8 @@ export type RestEndpointMethods = {
      */
     listFollowersForAuthenticatedUser: {
       (
-        params?: RequestParameters & Endpoints["GET /user/followers"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/followers"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /user/followers"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8168,7 +9674,10 @@ export type RestEndpointMethods = {
     listFollowersForUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/followers"][0]
+          Omit<
+            Endpoints["GET /users/:username/followers"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/followers"][2]>
       >;
@@ -8181,7 +9690,8 @@ export type RestEndpointMethods = {
      */
     listFollowingForAuthenticatedUser: {
       (
-        params?: RequestParameters & Endpoints["GET /user/following"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/following"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /user/following"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8192,7 +9702,10 @@ export type RestEndpointMethods = {
     listFollowingForUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/following"][0]
+          Omit<
+            Endpoints["GET /users/:username/following"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/following"][2]>
       >;
@@ -8204,7 +9717,8 @@ export type RestEndpointMethods = {
      */
     listGpgKeys: {
       (
-        params?: RequestParameters & Endpoints["GET /user/gpg_keys"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/gpg_keys"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /user/gpg_keys"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8215,7 +9729,10 @@ export type RestEndpointMethods = {
     listGpgKeysForUser: {
       (
         params?: RequestParameters &
-          Endpoints["GET /users/:username/gpg_keys"][0]
+          Omit<
+            Endpoints["GET /users/:username/gpg_keys"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["GET /users/:username/gpg_keys"][2]>
       >;
@@ -8227,7 +9744,8 @@ export type RestEndpointMethods = {
      */
     listPublicEmails: {
       (
-        params?: RequestParameters & Endpoints["GET /user/public_emails"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/public_emails"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /user/public_emails"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8236,9 +9754,10 @@ export type RestEndpointMethods = {
      * Lists the public SSH keys for the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
      */
     listPublicKeys: {
-      (params?: RequestParameters & Endpoints["GET /user/keys"][0]): Promise<
-        OctokitResponse<Endpoints["GET /user/keys"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["GET /user/keys"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["GET /user/keys"][2]>>;
 
       endpoint: EndpointInterface;
     };
@@ -8247,7 +9766,8 @@ export type RestEndpointMethods = {
      */
     listPublicKeysForUser: {
       (
-        params?: RequestParameters & Endpoints["GET /users/:username/keys"][0]
+        params?: RequestParameters &
+          Omit<Endpoints["GET /users/:username/keys"][0], "baseUrl" | "headers">
       ): Promise<OctokitResponse<Endpoints["GET /users/:username/keys"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8258,7 +9778,10 @@ export type RestEndpointMethods = {
     togglePrimaryEmailVisibility: {
       (
         params?: RequestParameters &
-          Endpoints["PATCH /user/email/visibility"][0]
+          Omit<
+            Endpoints["PATCH /user/email/visibility"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<OctokitResponse<Endpoints["PATCH /user/email/visibility"][2]>>;
 
       endpoint: EndpointInterface;
@@ -8267,7 +9790,10 @@ export type RestEndpointMethods = {
     unblock: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /user/blocks/:username"][0]
+          Omit<
+            Endpoints["DELETE /user/blocks/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /user/blocks/:username"][2]>
       >;
@@ -8280,7 +9806,10 @@ export type RestEndpointMethods = {
     unfollow: {
       (
         params?: RequestParameters &
-          Endpoints["DELETE /user/following/:username"][0]
+          Omit<
+            Endpoints["DELETE /user/following/:username"][0],
+            "baseUrl" | "headers"
+          >
       ): Promise<
         OctokitResponse<Endpoints["DELETE /user/following/:username"][2]>
       >;
@@ -8291,9 +9820,10 @@ export type RestEndpointMethods = {
      * **Note:** If your email is set to private and you send an `email` parameter as part of this request to update your profile, your privacy settings are still enforced: the email address will not be displayed on your public profile or via the API.
      */
     updateAuthenticated: {
-      (params?: RequestParameters & Endpoints["PATCH /user"][0]): Promise<
-        OctokitResponse<Endpoints["PATCH /user"][2]>
-      >;
+      (
+        params?: RequestParameters &
+          Omit<Endpoints["PATCH /user"][0], "baseUrl" | "headers">
+      ): Promise<OctokitResponse<Endpoints["PATCH /user"][2]>>;
 
       endpoint: EndpointInterface;
     };
