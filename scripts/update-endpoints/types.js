@@ -42,7 +42,7 @@ async function generateTypes() {
     });
   }, []);
 
-  const RestEndpointNamespaces = [];
+  const RestEndpointMethodParameterAndResponseTypes = [];
   for (const namespace of namespaces) {
     const namespaceMethods = [];
     for (const method of namespace.methods) {
@@ -50,10 +50,27 @@ async function generateTypes() {
         ? `& { mediaType: { previews: string[] } }`
         : "";
       namespaceMethods.push(
+        `${method.name}: {
+          parameters: RequestParameters & Omit<Endpoints["${method.route}"]["parameters"], "baseUrl" | "headers"> ${overrideRequiredPreviews},
+          response: Endpoints["${method.route}"]["response"]
+        }`
+      );
+    }
+
+    RestEndpointMethodParameterAndResponseTypes.push(`${namespace.namespace}: {
+      ${namespaceMethods.join("\n")}
+    }`);
+  }
+
+  const RestEndpointMethodNamespaceTypes = [];
+  for (const namespace of namespaces) {
+    const namespaceMethods = [];
+    for (const method of namespace.methods) {
+      namespaceMethods.push(
         [
           method.jsdoc,
           `${method.name}: {
-          (params?: RequestParameters & Omit<Endpoints["${method.route}"][0], "baseUrl" | "headers"> ${overrideRequiredPreviews}): Promise<OctokitResponse<Endpoints["${method.route}"][2]>>
+          (params?: RestEndpointMethodTypes["${namespace.namespace}"]["${method.name}"]["parameters"]): Promise<RestEndpointMethodTypes["${namespace.namespace}"]["${method.name}"]["response"]>
 
           endpoint: EndpointInterface;
         }`,
@@ -61,7 +78,7 @@ async function generateTypes() {
       );
     }
 
-    RestEndpointNamespaces.push(`${namespace.namespace}: {
+    RestEndpointMethodNamespaceTypes.push(`${namespace.namespace}: {
       ${namespaceMethods.join("\n")}
     }`);
   }
@@ -71,14 +88,13 @@ async function generateTypes() {
       `import {
   EndpointInterface,
   Endpoints,
-  RequestParameters,
-  OctokitResponse
-} from "@octokit/types";
-
-type AnyResponse = OctokitResponse<any>;
-type EmptyParams = {};`,
+  RequestParameters
+} from "@octokit/types";`,
+      `\n\nexport type RestEndpointMethodTypes = {
+        ${RestEndpointMethodParameterAndResponseTypes.join("\n")}
+      }`,
       `\n\nexport type RestEndpointMethods = {
-        ${RestEndpointNamespaces.join("\n")}
+        ${RestEndpointMethodNamespaceTypes.join("\n")}
       }`,
     ].join("\n"),
     {
@@ -113,9 +129,9 @@ async function getRoutes() {
     const url = endpoint.url
       .toLowerCase()
       // replace {param} with :param
-      .replace(/\/\{([^}]+)}/g, "/:$1")
+      .replace(/\{([^?][^}]+)}/g, ":$1")
       // stecial case for "Upload a release asset": remove ":origin" prefix
-      .replace(/^\{origin\}/, "");
+      .replace(/^:origin/, "");
 
     // new route
     newRoutes[scope][idName] = {
