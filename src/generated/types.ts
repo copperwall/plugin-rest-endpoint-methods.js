@@ -10,7 +10,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/actions/runs/:run_id/cancel"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/actions/runs/:run_id/cancel"]["response"];
     };
@@ -18,7 +18,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/actions/secrets/:name"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/actions/secrets/:name"]["response"];
     };
@@ -26,7 +26,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/actions/runners/registration-token"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/actions/runners/registration-token"]["response"];
     };
@@ -34,7 +34,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/actions/runners/remove-token"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/actions/runners/remove-token"]["response"];
     };
@@ -42,7 +42,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id"]["response"];
     };
@@ -50,7 +50,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/actions/secrets/:name"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/actions/secrets/:name"]["response"];
     };
@@ -58,7 +58,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/artifacts/:artifact_id/:archive_format"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/artifacts/:artifact_id/:archive_format"]["response"];
     };
@@ -66,7 +66,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/artifacts/:artifact_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/artifacts/:artifact_id"]["response"];
     };
@@ -74,7 +74,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/secrets/public-key"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/secrets/public-key"]["response"];
     };
@@ -82,7 +82,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/secrets/:name"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/secrets/:name"]["response"];
     };
@@ -90,7 +90,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/runners/:runner_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/runners/:runner_id"]["response"];
     };
@@ -98,7 +98,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/workflows/:workflow_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/workflows/:workflow_id"]["response"];
     };
@@ -106,7 +106,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/jobs/:job_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/jobs/:job_id"]["response"];
     };
@@ -114,7 +114,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id"]["response"];
     };
@@ -122,7 +122,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/artifacts"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/artifacts"]["response"];
     };
@@ -130,7 +130,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/runners/downloads"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/runners/downloads"]["response"];
     };
@@ -138,7 +138,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/jobs"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/jobs"]["response"];
     };
@@ -146,7 +146,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/runs"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/runs"]["response"];
     };
@@ -154,7 +154,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/workflows"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/workflows"]["response"];
     };
@@ -162,7 +162,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/secrets"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/secrets"]["response"];
     };
@@ -170,7 +170,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/runners"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/runners"]["response"];
     };
@@ -178,7 +178,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/jobs/:job_id/logs"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/jobs/:job_id/logs"]["response"];
     };
@@ -186,7 +186,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/artifacts"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/artifacts"]["response"];
     };
@@ -194,7 +194,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/logs"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/runs/:run_id/logs"]["response"];
     };
@@ -202,7 +202,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs"]["response"];
     };
@@ -210,7 +210,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/actions/runs/:run_id/rerun"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/actions/runs/:run_id/rerun"]["response"];
     };
@@ -218,7 +218,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/actions/runners/:runner_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/actions/runners/:runner_id"]["response"];
     };
@@ -228,7 +228,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/starred/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/starred/:owner/:repo"]["response"];
     };
@@ -236,7 +236,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/starred/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/starred/:owner/:repo"]["response"];
     };
@@ -244,7 +244,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/subscription"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/subscription"]["response"];
     };
@@ -252,20 +252,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /notifications/threads/:thread_id/subscription"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /notifications/threads/:thread_id/subscription"]["response"];
     };
     getFeeds: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /feeds"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /feeds"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /feeds"]["response"];
     };
     getRepoSubscription: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/subscription"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/subscription"]["response"];
     };
@@ -273,7 +276,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /notifications/threads/:thread_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /notifications/threads/:thread_id"]["response"];
     };
@@ -281,7 +284,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /notifications"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /notifications"]["response"];
     };
@@ -289,7 +292,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /notifications/threads/:thread_id/subscription"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /notifications/threads/:thread_id/subscription"]["response"];
     };
@@ -297,7 +300,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/events"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/events"]["response"];
     };
@@ -305,7 +308,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/events/orgs/:org"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/events/orgs/:org"]["response"];
     };
@@ -313,20 +316,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/events"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/events"]["response"];
     };
     listFeeds: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /feeds"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /feeds"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /feeds"]["response"];
     };
     listNotifications: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /notifications"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /notifications"]["response"];
     };
@@ -334,7 +340,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /notifications"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /notifications"]["response"];
     };
@@ -342,7 +348,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/notifications"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/notifications"]["response"];
     };
@@ -350,20 +356,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/events/orgs/:org"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/events/orgs/:org"]["response"];
     };
     listPublicEvents: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /events"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /events"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /events"]["response"];
     };
     listPublicEventsForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/events"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/events"]["response"];
     };
@@ -371,7 +380,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /networks/:owner/:repo/events"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /networks/:owner/:repo/events"]["response"];
     };
@@ -379,7 +388,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/events/public"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/events/public"]["response"];
     };
@@ -387,7 +396,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/events"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/events"]["response"];
     };
@@ -395,7 +404,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/received_events"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/received_events"]["response"];
     };
@@ -403,7 +412,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/received_events/public"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/received_events/public"]["response"];
     };
@@ -411,7 +420,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/events"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/events"]["response"];
     };
@@ -419,7 +428,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/notifications"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/notifications"]["response"];
     };
@@ -427,7 +436,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/starred"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/starred"]["response"];
     };
@@ -435,7 +444,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/starred"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/starred"]["response"];
     };
@@ -443,7 +452,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/subscriptions"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/subscriptions"]["response"];
     };
@@ -451,7 +460,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/stargazers"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/stargazers"]["response"];
     };
@@ -459,7 +468,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/subscriptions"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/subscriptions"]["response"];
     };
@@ -467,7 +476,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/subscribers"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/subscribers"]["response"];
     };
@@ -475,7 +484,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /notifications"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /notifications"]["response"];
     };
@@ -483,7 +492,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /notifications"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /notifications"]["response"];
     };
@@ -491,7 +500,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/notifications"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/notifications"]["response"];
     };
@@ -499,7 +508,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/notifications"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/notifications"]["response"];
     };
@@ -507,7 +516,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /notifications/threads/:thread_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /notifications/threads/:thread_id"]["response"];
     };
@@ -515,7 +524,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/subscription"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/subscription"]["response"];
     };
@@ -523,7 +532,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /notifications/threads/:thread_id/subscription"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /notifications/threads/:thread_id/subscription"]["response"];
     };
@@ -531,7 +540,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /user/starred/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /user/starred/:owner/:repo"]["response"];
     };
@@ -539,7 +548,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /user/starred/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /user/starred/:owner/:repo"]["response"];
     };
@@ -547,7 +556,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/starred/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /user/starred/:owner/:repo"]["response"];
     };
@@ -555,7 +564,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/starred/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /user/starred/:owner/:repo"]["response"];
     };
@@ -565,15 +574,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /user/installations/:installation_id/repositories/:repository_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PUT /user/installations/:installation_id/repositories/:repository_id"]["response"];
     };
     checkAccountIsAssociatedWithAny: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /marketplace_listing/accounts/:account_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /marketplace_listing/accounts/:account_id"]["response"];
     };
@@ -581,7 +590,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /marketplace_listing/stubbed/accounts/:account_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /marketplace_listing/stubbed/accounts/:account_id"]["response"];
     };
@@ -589,7 +598,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /applications/:client_id/token"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /applications/:client_id/token"]["response"];
     };
@@ -597,15 +606,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /content_references/:content_reference_id/attachments"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /content_references/:content_reference_id/attachments"]["response"];
     };
     createFromManifest: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /app-manifests/:code/conversions"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /app-manifests/:code/conversions"]["response"];
     };
@@ -613,15 +622,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /app/installations/:installation_id/access_tokens"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /app/installations/:installation_id/access_tokens"]["response"];
     };
     deleteAuthorization: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /applications/:client_id/grant"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /applications/:client_id/grant"]["response"];
     };
@@ -629,62 +638,63 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /app/installations/:installation_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /app/installations/:installation_id"]["response"];
     };
     deleteToken: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /applications/:client_id/token"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /applications/:client_id/token"]["response"];
     };
     getAuthenticated: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /app"]["parameters"], "baseUrl" | "headers"> & {
-          mediaType: { previews: string[] };
-        };
+        Omit<
+          Endpoints["GET /app"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /app"]["response"];
     };
     getBySlug: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /apps/:app_slug"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /apps/:app_slug"]["response"];
     };
     getInstallation: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /app/installations/:installation_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /app/installations/:installation_id"]["response"];
     };
     getOrgInstallation: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/installation"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/installation"]["response"];
     };
     getRepoInstallation: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/installation"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/installation"]["response"];
     };
     getSubscriptionPlanForAccount: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /marketplace_listing/accounts/:account_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /marketplace_listing/accounts/:account_id"]["response"];
     };
@@ -692,7 +702,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /marketplace_listing/stubbed/accounts/:account_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /marketplace_listing/stubbed/accounts/:account_id"]["response"];
     };
@@ -700,15 +710,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/installation"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /users/:username/installation"]["response"];
     };
     listAccountsForPlan: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /marketplace_listing/plans/:plan_id/accounts"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /marketplace_listing/plans/:plan_id/accounts"]["response"];
     };
@@ -716,7 +726,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /marketplace_listing/stubbed/plans/:plan_id/accounts"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /marketplace_listing/stubbed/plans/:plan_id/accounts"]["response"];
     };
@@ -724,7 +734,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /marketplace_listing/plans/:plan_id/accounts"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /marketplace_listing/plans/:plan_id/accounts"]["response"];
     };
@@ -732,7 +742,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /marketplace_listing/stubbed/plans/:plan_id/accounts"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /marketplace_listing/stubbed/plans/:plan_id/accounts"]["response"];
     };
@@ -740,31 +750,31 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/installations/:installation_id/repositories"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/installations/:installation_id/repositories"]["response"];
     };
     listInstallations: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /app/installations"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /app/installations"]["response"];
     };
     listInstallationsForAuthenticatedUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/installations"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/installations"]["response"];
     };
     listMarketplacePurchasesForAuthenticatedUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/marketplace_purchases"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/marketplace_purchases"]["response"];
     };
@@ -772,7 +782,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/marketplace_purchases/stubbed"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/marketplace_purchases/stubbed"]["response"];
     };
@@ -780,7 +790,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /marketplace_listing/plans"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /marketplace_listing/plans"]["response"];
     };
@@ -788,7 +798,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /marketplace_listing/stubbed/plans"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /marketplace_listing/stubbed/plans"]["response"];
     };
@@ -796,15 +806,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /installation/repositories"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /installation/repositories"]["response"];
     };
     listSubscriptionsForAuthenticatedUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/marketplace_purchases"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/marketplace_purchases"]["response"];
     };
@@ -812,7 +822,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/marketplace_purchases/stubbed"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/marketplace_purchases/stubbed"]["response"];
     };
@@ -820,15 +830,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/installations/:installation_id/repositories/:repository_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /user/installations/:installation_id/repositories/:repository_id"]["response"];
     };
     resetToken: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /applications/:client_id/token"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /applications/:client_id/token"]["response"];
     };
@@ -836,7 +846,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /installation/token"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /installation/token"]["response"];
     };
@@ -846,88 +856,88 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/check-runs"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:owner/:repo/check-runs"]["response"];
     };
     createSuite: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/check-suites"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:owner/:repo/check-suites"]["response"];
     };
     get: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/check-runs/:check_run_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/check-runs/:check_run_id"]["response"];
     };
     getSuite: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/check-suites/:check_suite_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/check-suites/:check_suite_id"]["response"];
     };
     listAnnotations: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/check-runs/:check_run_id/annotations"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/check-runs/:check_run_id/annotations"]["response"];
     };
     listForRef: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/commits/:ref/check-runs"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/commits/:ref/check-runs"]["response"];
     };
     listForSuite: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs"]["response"];
     };
     listSuitesForRef: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/commits/:ref/check-suites"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/commits/:ref/check-suites"]["response"];
     };
     rerequestSuite: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest"]["response"];
     };
     setSuitesPreferences: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/check-suites/preferences"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PATCH /repos/:owner/:repo/check-suites/preferences"]["response"];
     };
     update: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/check-runs/:check_run_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PATCH /repos/:owner/:repo/check-runs/:check_run_id"]["response"];
     };
   };
@@ -936,39 +946,42 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /codes_of_conduct"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /codes_of_conduct"]["response"];
     };
     getConductCode: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /codes_of_conduct/:key"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /codes_of_conduct/:key"]["response"];
     };
     getForRepo: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/community/code_of_conduct"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/community/code_of_conduct"]["response"];
     };
     listConductCodes: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /codes_of_conduct"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /codes_of_conduct"]["response"];
     };
   };
   emojis: {
     get: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /emojis"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /emojis"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /emojis"]["response"];
     };
   };
@@ -977,20 +990,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gists/:gist_id/star"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gists/:gist_id/star"]["response"];
     };
     create: {
       parameters: RequestParameters &
-        Omit<Endpoints["POST /gists"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["POST /gists"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /gists"]["response"];
     };
     createComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /gists/:gist_id/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /gists/:gist_id/comments"]["response"];
     };
@@ -998,7 +1014,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /gists/:gist_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /gists/:gist_id"]["response"];
     };
@@ -1006,7 +1022,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /gists/:gist_id/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /gists/:gist_id/comments/:comment_id"]["response"];
     };
@@ -1014,7 +1030,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /gists/:gist_id/forks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /gists/:gist_id/forks"]["response"];
     };
@@ -1022,7 +1038,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gists/:gist_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gists/:gist_id"]["response"];
     };
@@ -1030,7 +1046,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gists/:gist_id/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gists/:gist_id/comments/:comment_id"]["response"];
     };
@@ -1038,20 +1054,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gists/:gist_id/:sha"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gists/:gist_id/:sha"]["response"];
     };
     list: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /gists"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /gists"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /gists"]["response"];
     };
     listComments: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gists/:gist_id/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gists/:gist_id/comments"]["response"];
     };
@@ -1059,7 +1078,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gists/:gist_id/commits"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gists/:gist_id/commits"]["response"];
     };
@@ -1067,7 +1086,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/gists"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/gists"]["response"];
     };
@@ -1075,7 +1094,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gists/:gist_id/forks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gists/:gist_id/forks"]["response"];
     };
@@ -1083,7 +1102,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gists/public"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gists/public"]["response"];
     };
@@ -1091,7 +1110,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/gists"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/gists"]["response"];
     };
@@ -1099,7 +1118,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gists/starred"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gists/starred"]["response"];
     };
@@ -1107,7 +1126,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /gists/:gist_id/star"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /gists/:gist_id/star"]["response"];
     };
@@ -1115,7 +1134,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /gists/:gist_id/star"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /gists/:gist_id/star"]["response"];
     };
@@ -1123,7 +1142,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /gists/:gist_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /gists/:gist_id"]["response"];
     };
@@ -1131,7 +1150,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /gists/:gist_id/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /gists/:gist_id/comments/:comment_id"]["response"];
     };
@@ -1141,7 +1160,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/git/blobs"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/git/blobs"]["response"];
     };
@@ -1149,7 +1168,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/git/commits"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/git/commits"]["response"];
     };
@@ -1157,7 +1176,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/git/refs"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/git/refs"]["response"];
     };
@@ -1165,7 +1184,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/git/tags"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/git/tags"]["response"];
     };
@@ -1173,7 +1192,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/git/trees"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/git/trees"]["response"];
     };
@@ -1181,7 +1200,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/git/refs/:ref"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/git/refs/:ref"]["response"];
     };
@@ -1189,7 +1208,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/git/blobs/:file_sha"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/git/blobs/:file_sha"]["response"];
     };
@@ -1197,7 +1216,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/git/commits/:commit_sha"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/git/commits/:commit_sha"]["response"];
     };
@@ -1205,7 +1224,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/git/ref/:ref"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/git/ref/:ref"]["response"];
     };
@@ -1213,7 +1232,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/git/tags/:tag_sha"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/git/tags/:tag_sha"]["response"];
     };
@@ -1221,7 +1240,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/git/trees/:tree_sha"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/git/trees/:tree_sha"]["response"];
     };
@@ -1229,7 +1248,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/git/matching-refs/:ref"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/git/matching-refs/:ref"]["response"];
     };
@@ -1237,7 +1256,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/git/refs/:ref"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/git/refs/:ref"]["response"];
     };
@@ -1247,7 +1266,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gitignore/templates/:name"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gitignore/templates/:name"]["response"];
     };
@@ -1255,7 +1274,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /gitignore/templates"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /gitignore/templates"]["response"];
     };
@@ -1265,48 +1284,48 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /orgs/:org/interaction-limits"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PUT /orgs/:org/interaction-limits"]["response"];
     };
     addOrUpdateRestrictionsForRepo: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/interaction-limits"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PUT /repos/:owner/:repo/interaction-limits"]["response"];
     };
     getRestrictionsForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/interaction-limits"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/interaction-limits"]["response"];
     };
     getRestrictionsForRepo: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/interaction-limits"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/interaction-limits"]["response"];
     };
     removeRestrictionsForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/interaction-limits"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /orgs/:org/interaction-limits"]["response"];
     };
     removeRestrictionsForRepo: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/interaction-limits"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /repos/:owner/:repo/interaction-limits"]["response"];
     };
   };
@@ -1315,7 +1334,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/issues/:issue_number/assignees"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/issues/:issue_number/assignees"]["response"];
     };
@@ -1323,7 +1342,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/issues/:issue_number/labels"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/issues/:issue_number/labels"]["response"];
     };
@@ -1331,7 +1350,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/assignees/:assignee"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/assignees/:assignee"]["response"];
     };
@@ -1339,7 +1358,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/issues"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/issues"]["response"];
     };
@@ -1347,7 +1366,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/issues/:issue_number/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/issues/:issue_number/comments"]["response"];
     };
@@ -1355,7 +1374,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/labels"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/labels"]["response"];
     };
@@ -1363,7 +1382,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/milestones"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/milestones"]["response"];
     };
@@ -1371,7 +1390,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/issues/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/issues/comments/:comment_id"]["response"];
     };
@@ -1379,7 +1398,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/labels/:name"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/labels/:name"]["response"];
     };
@@ -1387,7 +1406,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/milestones/:milestone_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/milestones/:milestone_number"]["response"];
     };
@@ -1395,7 +1414,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/issues/:issue_number"]["response"];
     };
@@ -1403,7 +1422,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/issues/comments/:comment_id"]["response"];
     };
@@ -1411,7 +1430,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/events/:event_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/issues/events/:event_id"]["response"];
     };
@@ -1419,7 +1438,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/labels/:name"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/labels/:name"]["response"];
     };
@@ -1427,20 +1446,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/milestones/:milestone_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/milestones/:milestone_number"]["response"];
     };
     list: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /issues"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /issues"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /issues"]["response"];
     };
     listAssignees: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/assignees"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/assignees"]["response"];
     };
@@ -1448,7 +1470,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/issues/:issue_number/comments"]["response"];
     };
@@ -1456,7 +1478,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/issues/comments"]["response"];
     };
@@ -1464,7 +1486,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number/events"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/issues/:issue_number/events"]["response"];
     };
@@ -1472,7 +1494,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/events"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/issues/events"]["response"];
     };
@@ -1480,15 +1502,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number/timeline"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/issues/:issue_number/timeline"]["response"];
     };
     listForAuthenticatedUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/issues"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/issues"]["response"];
     };
@@ -1496,7 +1518,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/issues"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/issues"]["response"];
     };
@@ -1504,7 +1526,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/issues"]["response"];
     };
@@ -1512,7 +1534,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/milestones/:milestone_number/labels"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/milestones/:milestone_number/labels"]["response"];
     };
@@ -1520,7 +1542,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/labels"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/labels"]["response"];
     };
@@ -1528,7 +1550,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number/labels"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/issues/:issue_number/labels"]["response"];
     };
@@ -1536,7 +1558,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/milestones"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/milestones"]["response"];
     };
@@ -1544,7 +1566,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/lock"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/lock"]["response"];
     };
@@ -1552,7 +1574,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels"]["response"];
     };
@@ -1560,7 +1582,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/assignees"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/assignees"]["response"];
     };
@@ -1568,7 +1590,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels/:name"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels/:name"]["response"];
     };
@@ -1576,7 +1598,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/labels"]["response"];
     };
@@ -1584,7 +1606,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/labels"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/labels"]["response"];
     };
@@ -1592,7 +1614,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/labels"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/issues/:issue_number/labels"]["response"];
     };
@@ -1600,7 +1622,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/lock"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/lock"]["response"];
     };
@@ -1608,7 +1630,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/issues/:issue_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/issues/:issue_number"]["response"];
     };
@@ -1616,7 +1638,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/issues/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/issues/comments/:comment_id"]["response"];
     };
@@ -1624,7 +1646,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/labels/:name"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/labels/:name"]["response"];
     };
@@ -1632,7 +1654,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/milestones/:milestone_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/milestones/:milestone_number"]["response"];
     };
@@ -1642,7 +1664,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /licenses/:license"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /licenses/:license"]["response"];
     };
@@ -1650,27 +1672,33 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/license"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/license"]["response"];
     };
     listCommonlyUsed: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /licenses"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /licenses"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /licenses"]["response"];
     };
   };
   markdown: {
     render: {
       parameters: RequestParameters &
-        Omit<Endpoints["POST /markdown"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["POST /markdown"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /markdown"]["response"];
     };
     renderRaw: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /markdown/raw"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /markdown/raw"]["response"];
     };
@@ -1678,7 +1706,10 @@ export type RestEndpointMethodTypes = {
   meta: {
     get: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /meta"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /meta"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /meta"]["response"];
     };
   };
@@ -1687,7 +1718,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/import"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/import"]["response"];
     };
@@ -1695,39 +1726,39 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/migrations/:migration_id/archive"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /user/migrations/:migration_id/archive"]["response"];
     };
     deleteArchiveForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/migrations/:migration_id/archive"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /orgs/:org/migrations/:migration_id/archive"]["response"];
     };
     downloadArchiveForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/migrations/:migration_id/archive"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/migrations/:migration_id/archive"]["response"];
     };
     getArchiveForAuthenticatedUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/migrations/:migration_id/archive"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/migrations/:migration_id/archive"]["response"];
     };
     getCommitAuthors: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/import/authors"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/import/authors"]["response"];
     };
@@ -1735,7 +1766,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/import"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/import"]["response"];
     };
@@ -1743,7 +1774,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/import/large_files"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/import/large_files"]["response"];
     };
@@ -1751,55 +1782,55 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/migrations/:migration_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/migrations/:migration_id"]["response"];
     };
     getStatusForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/migrations/:migration_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/migrations/:migration_id"]["response"];
     };
     listForAuthenticatedUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/migrations"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/migrations"]["response"];
     };
     listForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/migrations"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/migrations"]["response"];
     };
     listReposForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/migrations/:migration_id/repositories"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/migrations/:migration_id/repositories"]["response"];
     };
     listReposForUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/:migration_id/repositories"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/:migration_id/repositories"]["response"];
     };
     mapCommitAuthor: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/import/authors/:author_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/import/authors/:author_id"]["response"];
     };
@@ -1807,7 +1838,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/import/lfs"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/import/lfs"]["response"];
     };
@@ -1815,7 +1846,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /user/migrations"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /user/migrations"]["response"];
     };
@@ -1823,7 +1854,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/migrations"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /orgs/:org/migrations"]["response"];
     };
@@ -1831,7 +1862,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/import"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/import"]["response"];
     };
@@ -1839,23 +1870,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/migrations/:migration_id/repos/:repo_name/lock"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /user/migrations/:migration_id/repos/:repo_name/lock"]["response"];
     };
     unlockRepoForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/migrations/:migration_id/repos/:repo_name/lock"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /orgs/:org/migrations/:migration_id/repos/:repo_name/lock"]["response"];
     };
     updateImport: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/import"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/import"]["response"];
     };
@@ -1865,7 +1896,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /orgs/:org/memberships/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /orgs/:org/memberships/:username"]["response"];
     };
@@ -1873,7 +1904,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /orgs/:org/blocks/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /orgs/:org/blocks/:username"]["response"];
     };
@@ -1881,7 +1912,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/blocks/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/blocks/:username"]["response"];
     };
@@ -1889,7 +1920,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/members/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/members/:username"]["response"];
     };
@@ -1897,7 +1928,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/public_members/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/public_members/:username"]["response"];
     };
@@ -1905,7 +1936,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/public_members/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/public_members/:username"]["response"];
     };
@@ -1913,7 +1944,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /orgs/:org/outside_collaborators/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /orgs/:org/outside_collaborators/:username"]["response"];
     };
@@ -1921,7 +1952,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/hooks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /orgs/:org/hooks"]["response"];
     };
@@ -1929,7 +1960,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/invitations"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /orgs/:org/invitations"]["response"];
     };
@@ -1937,20 +1968,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/hooks/:hook_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/hooks/:hook_id"]["response"];
     };
     get: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /orgs/:org"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /orgs/:org"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org"]["response"];
     };
     getHook: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/hooks/:hook_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/hooks/:hook_id"]["response"];
     };
@@ -1958,7 +1992,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/memberships/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/memberships/:username"]["response"];
     };
@@ -1966,7 +2000,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/memberships/orgs/:org"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/memberships/orgs/:org"]["response"];
     };
@@ -1974,7 +2008,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /organizations"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /organizations"]["response"];
     };
@@ -1982,20 +2016,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/blocks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/blocks"]["response"];
     };
     listForAuthenticatedUser: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /user/orgs"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /user/orgs"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/orgs"]["response"];
     };
     listForUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/orgs"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/orgs"]["response"];
     };
@@ -2003,7 +2040,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/hooks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/hooks"]["response"];
     };
@@ -2011,15 +2048,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/installations"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/installations"]["response"];
     };
     listInvitationTeams: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/invitations/:invitation_id/teams"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/invitations/:invitation_id/teams"]["response"];
     };
@@ -2027,7 +2064,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/members"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/members"]["response"];
     };
@@ -2035,7 +2072,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/memberships/orgs"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/memberships/orgs"]["response"];
     };
@@ -2043,7 +2080,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/outside_collaborators"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/outside_collaborators"]["response"];
     };
@@ -2051,7 +2088,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/invitations"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/invitations"]["response"];
     };
@@ -2059,7 +2096,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/public_members"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/public_members"]["response"];
     };
@@ -2067,7 +2104,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/hooks/:hook_id/pings"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /orgs/:org/hooks/:hook_id/pings"]["response"];
     };
@@ -2075,7 +2112,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /orgs/:org/public_members/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /orgs/:org/public_members/:username"]["response"];
     };
@@ -2083,7 +2120,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/members/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/members/:username"]["response"];
     };
@@ -2091,7 +2128,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/memberships/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/memberships/:username"]["response"];
     };
@@ -2099,7 +2136,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/outside_collaborators/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/outside_collaborators/:username"]["response"];
     };
@@ -2107,7 +2144,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/blocks/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/blocks/:username"]["response"];
     };
@@ -2115,7 +2152,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /orgs/:org"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /orgs/:org"]["response"];
     };
@@ -2123,7 +2160,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /orgs/:org/hooks/:hook_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /orgs/:org/hooks/:hook_id"]["response"];
     };
@@ -2131,7 +2168,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /user/memberships/orgs/:org"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /user/memberships/orgs/:org"]["response"];
     };
@@ -2141,200 +2178,200 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /projects/:project_id/collaborators/:username"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PUT /projects/:project_id/collaborators/:username"]["response"];
     };
     createCard: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /projects/columns/:column_id/cards"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /projects/columns/:column_id/cards"]["response"];
     };
     createColumn: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /projects/:project_id/columns"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /projects/:project_id/columns"]["response"];
     };
     createForAuthenticatedUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /user/projects"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /user/projects"]["response"];
     };
     createForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/projects"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /orgs/:org/projects"]["response"];
     };
     createForRepo: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/projects"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:owner/:repo/projects"]["response"];
     };
     delete: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /projects/:project_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /projects/:project_id"]["response"];
     };
     deleteCard: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /projects/columns/cards/:card_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /projects/columns/cards/:card_id"]["response"];
     };
     deleteColumn: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /projects/columns/:column_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /projects/columns/:column_id"]["response"];
     };
     get: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /projects/:project_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /projects/:project_id"]["response"];
     };
     getCard: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /projects/columns/cards/:card_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /projects/columns/cards/:card_id"]["response"];
     };
     getColumn: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /projects/columns/:column_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /projects/columns/:column_id"]["response"];
     };
     listCards: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /projects/columns/:column_id/cards"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /projects/columns/:column_id/cards"]["response"];
     };
     listCollaborators: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /projects/:project_id/collaborators"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /projects/:project_id/collaborators"]["response"];
     };
     listColumns: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /projects/:project_id/columns"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /projects/:project_id/columns"]["response"];
     };
     listForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/projects"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/projects"]["response"];
     };
     listForRepo: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/projects"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/projects"]["response"];
     };
     listForUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/projects"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /users/:username/projects"]["response"];
     };
     moveCard: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /projects/columns/cards/:card_id/moves"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /projects/columns/cards/:card_id/moves"]["response"];
     };
     moveColumn: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /projects/columns/:column_id/moves"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /projects/columns/:column_id/moves"]["response"];
     };
     removeCollaborator: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /projects/:project_id/collaborators/:username"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /projects/:project_id/collaborators/:username"]["response"];
     };
     reviewUserPermissionLevel: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /projects/:project_id/collaborators/:username/permission"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /projects/:project_id/collaborators/:username/permission"]["response"];
     };
     update: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /projects/:project_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PATCH /projects/:project_id"]["response"];
     };
     updateCard: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /projects/columns/cards/:card_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PATCH /projects/columns/cards/:card_id"]["response"];
     };
     updateColumn: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /projects/columns/:column_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PATCH /projects/columns/:column_id"]["response"];
     };
   };
@@ -2343,7 +2380,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/merge"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/merge"]["response"];
     };
@@ -2351,7 +2388,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/pulls"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/pulls"]["response"];
     };
@@ -2359,7 +2396,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/comments"]["response"];
     };
@@ -2367,7 +2404,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/reviews"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/reviews"]["response"];
     };
@@ -2375,7 +2412,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/comments/:comment_id/replies"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/comments/:comment_id/replies"]["response"];
     };
@@ -2383,7 +2420,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"]["response"];
     };
@@ -2391,7 +2428,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/pulls/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/pulls/comments/:comment_id"]["response"];
     };
@@ -2399,7 +2436,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"]["response"];
     };
@@ -2407,7 +2444,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"]["response"];
     };
@@ -2415,7 +2452,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/dismissals"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/dismissals"]["response"];
     };
@@ -2423,7 +2460,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/:pull_number"]["response"];
     };
@@ -2431,7 +2468,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/comments/:comment_id"]["response"];
     };
@@ -2439,7 +2476,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/comments"]["response"];
     };
@@ -2447,7 +2484,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"]["response"];
     };
@@ -2455,7 +2492,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls"]["response"];
     };
@@ -2463,7 +2500,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/comments"]["response"];
     };
@@ -2471,7 +2508,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/comments"]["response"];
     };
@@ -2479,7 +2516,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/commits"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/commits"]["response"];
     };
@@ -2487,7 +2524,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/files"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/files"]["response"];
     };
@@ -2495,7 +2532,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers"]["response"];
     };
@@ -2503,7 +2540,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/:pull_number/reviews"]["response"];
     };
@@ -2511,7 +2548,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/merge"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/merge"]["response"];
     };
@@ -2519,7 +2556,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/events"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/events"]["response"];
     };
@@ -2527,7 +2564,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/pulls/:pull_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/pulls/:pull_number"]["response"];
     };
@@ -2535,15 +2572,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/update-branch"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/update-branch"]["response"];
     };
     updateComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/pulls/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/pulls/comments/:comment_id"]["response"];
     };
@@ -2551,7 +2588,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id"]["response"];
     };
@@ -2559,7 +2596,10 @@ export type RestEndpointMethodTypes = {
   rateLimit: {
     get: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /rate_limit"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /rate_limit"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /rate_limit"]["response"];
     };
   };
@@ -2568,160 +2608,160 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/comments/:comment_id/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:owner/:repo/comments/:comment_id/reactions"]["response"];
     };
     createForIssue: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/issues/:issue_number/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:owner/:repo/issues/:issue_number/reactions"]["response"];
     };
     createForIssueComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/issues/comments/:comment_id/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:owner/:repo/issues/comments/:comment_id/reactions"]["response"];
     };
     createForPullRequestReviewComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/pulls/comments/:comment_id/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:owner/:repo/pulls/comments/:comment_id/reactions"]["response"];
     };
     createForTeamDiscussionCommentInOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions"]["response"];
     };
     createForTeamDiscussionInOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions"]["response"];
     };
     delete: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /reactions/:reaction_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /reactions/:reaction_id"]["response"];
     };
     deleteForCommitComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id"]["response"];
     };
     deleteForIssue: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id"]["response"];
     };
     deleteForIssueComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id"]["response"];
     };
     deleteForPullRequestComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id"]["response"];
     };
     deleteForTeamDiscussion: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id"]["response"];
     };
     deleteForTeamDiscussionComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id"]["response"];
     };
     deleteLegacy: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /reactions/:reaction_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /reactions/:reaction_id"]["response"];
     };
     listForCommitComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/comments/:comment_id/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/comments/:comment_id/reactions"]["response"];
     };
     listForIssue: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/:issue_number/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/issues/:issue_number/reactions"]["response"];
     };
     listForIssueComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/issues/comments/:comment_id/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/issues/comments/:comment_id/reactions"]["response"];
     };
     listForPullRequestReviewComment: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pulls/comments/:comment_id/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/pulls/comments/:comment_id/reactions"]["response"];
     };
     listForTeamDiscussionCommentInOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions"]["response"];
     };
     listForTeamDiscussionInOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions"]["response"];
     };
   };
@@ -2730,7 +2770,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /user/repository_invitations/:invitation_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /user/repository_invitations/:invitation_id"]["response"];
     };
@@ -2738,7 +2778,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/collaborators/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/collaborators/:username"]["response"];
     };
@@ -2746,7 +2786,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/keys"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/keys"]["response"];
     };
@@ -2754,7 +2794,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/enforce_admins"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/enforce_admins"]["response"];
     };
@@ -2762,7 +2802,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"]["response"];
     };
@@ -2770,15 +2810,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/required_signatures"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/required_signatures"]["response"];
     };
     addProtectedBranchRequiredStatusChecksContexts: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"]["response"];
     };
@@ -2786,7 +2826,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"]["response"];
     };
@@ -2794,7 +2834,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/users"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/branches/:branch/protection/restrictions/users"]["response"];
     };
@@ -2802,7 +2842,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/collaborators/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/collaborators/:username"]["response"];
     };
@@ -2810,15 +2850,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/vulnerability-alerts"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/vulnerability-alerts"]["response"];
     };
     compareCommits: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/compare/:base...:head"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/compare/:base...:head"]["response"];
     };
@@ -2826,7 +2866,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/commits/:commit_sha/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/commits/:commit_sha/comments"]["response"];
     };
@@ -2834,7 +2874,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/deployments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/deployments"]["response"];
     };
@@ -2842,7 +2882,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/deployments/:deployment_id/statuses"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/deployments/:deployment_id/statuses"]["response"];
     };
@@ -2850,7 +2890,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/dispatches"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/dispatches"]["response"];
     };
@@ -2858,7 +2898,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /user/repos"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /user/repos"]["response"];
     };
@@ -2866,7 +2906,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/forks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/forks"]["response"];
     };
@@ -2874,7 +2914,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/hooks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/hooks"]["response"];
     };
@@ -2882,7 +2922,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/repos"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /orgs/:org/repos"]["response"];
     };
@@ -2890,7 +2930,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/contents/:path"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/contents/:path"]["response"];
     };
@@ -2898,7 +2938,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/releases"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/releases"]["response"];
     };
@@ -2906,7 +2946,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/statuses/:sha"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/statuses/:sha"]["response"];
     };
@@ -2914,15 +2954,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:template_owner/:template_repo/generate"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:template_owner/:template_repo/generate"]["response"];
     };
     declineInvitation: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/repository_invitations/:invitation_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /user/repository_invitations/:invitation_id"]["response"];
     };
@@ -2930,7 +2970,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo"]["response"];
     };
@@ -2938,7 +2978,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/comments/:comment_id"]["response"];
     };
@@ -2946,7 +2986,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/deployments/:deployment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/deployments/:deployment_id"]["response"];
     };
@@ -2954,7 +2994,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/downloads/:download_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/downloads/:download_id"]["response"];
     };
@@ -2962,7 +3002,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/contents/:path"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/contents/:path"]["response"];
     };
@@ -2970,7 +3010,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/hooks/:hook_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/hooks/:hook_id"]["response"];
     };
@@ -2978,7 +3018,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/invitations/:invitation_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/invitations/:invitation_id"]["response"];
     };
@@ -2986,7 +3026,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/releases/:release_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/releases/:release_id"]["response"];
     };
@@ -2994,7 +3034,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/releases/assets/:asset_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/releases/assets/:asset_id"]["response"];
     };
@@ -3002,55 +3042,55 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/automated-security-fixes"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /repos/:owner/:repo/automated-security-fixes"]["response"];
     };
     disablePagesSite: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/pages"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /repos/:owner/:repo/pages"]["response"];
     };
     disableVulnerabilityAlerts: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/vulnerability-alerts"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /repos/:owner/:repo/vulnerability-alerts"]["response"];
     };
     enableAutomatedSecurityFixes: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/automated-security-fixes"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PUT /repos/:owner/:repo/automated-security-fixes"]["response"];
     };
     enablePagesSite: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/pages"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /repos/:owner/:repo/pages"]["response"];
     };
     enableVulnerabilityAlerts: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/vulnerability-alerts"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PUT /repos/:owner/:repo/vulnerability-alerts"]["response"];
     };
     get: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo"]["response"];
     };
@@ -3058,15 +3098,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/topics"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/topics"]["response"];
     };
     getAppsWithAccessToProtectedBranch: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"]["response"];
     };
@@ -3074,7 +3114,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/:archive_format/:ref"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/:archive_format/:ref"]["response"];
     };
@@ -3082,7 +3122,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch"]["response"];
     };
@@ -3090,7 +3130,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch/protection"]["response"];
     };
@@ -3098,7 +3138,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/traffic/clones"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/traffic/clones"]["response"];
     };
@@ -3106,7 +3146,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/stats/code_frequency"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/stats/code_frequency"]["response"];
     };
@@ -3114,7 +3154,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/collaborators/:username/permission"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/collaborators/:username/permission"]["response"];
     };
@@ -3122,7 +3162,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/commits/:ref/status"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/commits/:ref/status"]["response"];
     };
@@ -3130,7 +3170,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/commits/:ref"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/commits/:ref"]["response"];
     };
@@ -3138,7 +3178,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/stats/commit_activity"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/stats/commit_activity"]["response"];
     };
@@ -3146,7 +3186,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/comments/:comment_id"]["response"];
     };
@@ -3154,7 +3194,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/contents/:path"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/contents/:path"]["response"];
     };
@@ -3162,7 +3202,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/stats/contributors"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/stats/contributors"]["response"];
     };
@@ -3170,7 +3210,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/keys/:key_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/keys/:key_id"]["response"];
     };
@@ -3178,7 +3218,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id"]["response"];
     };
@@ -3186,7 +3226,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id"]["response"];
     };
@@ -3194,7 +3234,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/downloads/:download_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/downloads/:download_id"]["response"];
     };
@@ -3202,7 +3242,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/hooks/:hook_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/hooks/:hook_id"]["response"];
     };
@@ -3210,7 +3250,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pages/builds/latest"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pages/builds/latest"]["response"];
     };
@@ -3218,7 +3258,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/releases/latest"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/releases/latest"]["response"];
     };
@@ -3226,7 +3266,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pages"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pages"]["response"];
     };
@@ -3234,7 +3274,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pages/builds/:build_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pages/builds/:build_id"]["response"];
     };
@@ -3242,7 +3282,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/stats/participation"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/stats/participation"]["response"];
     };
@@ -3250,7 +3290,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/enforce_admins"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/enforce_admins"]["response"];
     };
@@ -3258,7 +3298,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"]["response"];
     };
@@ -3266,15 +3306,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_signatures"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_signatures"]["response"];
     };
     getProtectedBranchRequiredStatusChecks: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks"]["response"];
     };
@@ -3282,7 +3322,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions"]["response"];
     };
@@ -3290,7 +3330,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/stats/punch_card"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/stats/punch_card"]["response"];
     };
@@ -3298,7 +3338,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/readme"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/readme"]["response"];
     };
@@ -3306,7 +3346,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/releases/:release_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/releases/:release_id"]["response"];
     };
@@ -3314,7 +3354,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/releases/assets/:asset_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/releases/assets/:asset_id"]["response"];
     };
@@ -3322,7 +3362,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/releases/tags/:tag"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/releases/tags/:tag"]["response"];
     };
@@ -3330,7 +3370,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"]["response"];
     };
@@ -3338,7 +3378,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/traffic/popular/paths"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/traffic/popular/paths"]["response"];
     };
@@ -3346,7 +3386,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/traffic/popular/referrers"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/traffic/popular/referrers"]["response"];
     };
@@ -3354,7 +3394,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/users"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/restrictions/users"]["response"];
     };
@@ -3362,20 +3402,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/traffic/views"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/traffic/views"]["response"];
     };
     list: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /user/repos"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /user/repos"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/repos"]["response"];
     };
     listAssetsForRelease: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/releases/:release_id/assets"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/releases/:release_id/assets"]["response"];
     };
@@ -3383,7 +3426,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches"]["response"];
     };
@@ -3391,15 +3434,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/branches-where-head"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/branches-where-head"]["response"];
     };
     listCollaborators: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/collaborators"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/collaborators"]["response"];
     };
@@ -3407,7 +3450,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/comments"]["response"];
     };
@@ -3415,7 +3458,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/comments"]["response"];
     };
@@ -3423,7 +3466,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/commits"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/commits"]["response"];
     };
@@ -3431,7 +3474,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/contributors"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/contributors"]["response"];
     };
@@ -3439,7 +3482,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/keys"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/keys"]["response"];
     };
@@ -3447,7 +3490,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id/statuses"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/deployments/:deployment_id/statuses"]["response"];
     };
@@ -3455,7 +3498,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/deployments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/deployments"]["response"];
     };
@@ -3463,20 +3506,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/downloads"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/downloads"]["response"];
     };
     listForAuthenticatedUser: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /user/repos"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /user/repos"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/repos"]["response"];
     };
     listForOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/repos"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/repos"]["response"];
     };
@@ -3484,7 +3530,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/repos"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/repos"]["response"];
     };
@@ -3492,7 +3538,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/forks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/forks"]["response"];
     };
@@ -3500,7 +3546,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/hooks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/hooks"]["response"];
     };
@@ -3508,7 +3554,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/invitations"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/invitations"]["response"];
     };
@@ -3516,7 +3562,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/repository_invitations"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/repository_invitations"]["response"];
     };
@@ -3524,7 +3570,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/languages"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/languages"]["response"];
     };
@@ -3532,7 +3578,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/pages/builds"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/pages/builds"]["response"];
     };
@@ -3540,7 +3586,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"]["response"];
     };
@@ -3548,7 +3594,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repositories"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repositories"]["response"];
     };
@@ -3556,15 +3602,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/pulls"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/commits/:commit_sha/pulls"]["response"];
     };
     listReleases: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/releases"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/releases"]["response"];
     };
@@ -3572,7 +3618,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/commits/:ref/statuses"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/commits/:ref/statuses"]["response"];
     };
@@ -3580,7 +3626,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/tags"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/tags"]["response"];
     };
@@ -3588,7 +3634,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/teams"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/teams"]["response"];
     };
@@ -3596,15 +3642,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/topics"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /repos/:owner/:repo/topics"]["response"];
     };
     merge: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/merges"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/merges"]["response"];
     };
@@ -3612,7 +3658,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/hooks/:hook_id/pings"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/hooks/:hook_id/pings"]["response"];
     };
@@ -3620,7 +3666,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection"]["response"];
     };
@@ -3628,7 +3674,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/collaborators/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/collaborators/:username"]["response"];
     };
@@ -3636,7 +3682,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/keys/:key_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/keys/:key_id"]["response"];
     };
@@ -3644,7 +3690,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/enforce_admins"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/enforce_admins"]["response"];
     };
@@ -3652,7 +3698,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"]["response"];
     };
@@ -3660,7 +3706,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"]["response"];
     };
@@ -3668,15 +3714,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_signatures"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_signatures"]["response"];
     };
     removeProtectedBranchRequiredStatusChecks: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks"]["response"];
     };
@@ -3684,7 +3730,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"]["response"];
     };
@@ -3692,7 +3738,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions"]["response"];
     };
@@ -3700,7 +3746,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"]["response"];
     };
@@ -3708,7 +3754,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/users"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/users"]["response"];
     };
@@ -3716,15 +3762,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/topics"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PUT /repos/:owner/:repo/topics"]["response"];
     };
     replaceProtectedBranchAppRestrictions: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/apps"]["response"];
     };
@@ -3732,7 +3778,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts"]["response"];
     };
@@ -3740,7 +3786,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/teams"]["response"];
     };
@@ -3748,7 +3794,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/users"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/users"]["response"];
     };
@@ -3756,15 +3802,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/topics"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PUT /repos/:owner/:repo/topics"]["response"];
     };
     requestPageBuild: {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/pages/builds"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/pages/builds"]["response"];
     };
@@ -3772,7 +3818,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /repos/:owner/:repo/community/profile"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /repos/:owner/:repo/community/profile"]["response"];
     };
@@ -3780,7 +3826,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/hooks/:hook_id/tests"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/hooks/:hook_id/tests"]["response"];
     };
@@ -3788,7 +3834,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/transfer"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/transfer"]["response"];
     };
@@ -3796,7 +3842,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo"]["response"];
     };
@@ -3804,7 +3850,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/branches/:branch/protection"]["response"];
     };
@@ -3812,7 +3858,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/comments/:comment_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/comments/:comment_id"]["response"];
     };
@@ -3820,7 +3866,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/hooks/:hook_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/hooks/:hook_id"]["response"];
     };
@@ -3828,7 +3874,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /repos/:owner/:repo/pages"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /repos/:owner/:repo/pages"]["response"];
     };
@@ -3836,7 +3882,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/invitations/:invitation_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/invitations/:invitation_id"]["response"];
     };
@@ -3844,7 +3890,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews"]["response"];
     };
@@ -3852,7 +3898,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/branches/:branch/protection/required_status_checks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/branches/:branch/protection/required_status_checks"]["response"];
     };
@@ -3860,7 +3906,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/releases/:release_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/releases/:release_id"]["response"];
     };
@@ -3868,7 +3914,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /repos/:owner/:repo/releases/assets/:asset_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /repos/:owner/:repo/releases/assets/:asset_id"]["response"];
     };
@@ -3876,7 +3922,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /repos/:owner/:repo/releases/:release_id/assets{?name,label}"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /repos/:owner/:repo/releases/:release_id/assets{?name,label}"]["response"];
     };
@@ -3886,7 +3932,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /search/code"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /search/code"]["response"];
     };
@@ -3894,15 +3940,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /search/commits"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /search/commits"]["response"];
     };
     issuesAndPullRequests: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /search/issues"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /search/issues"]["response"];
     };
@@ -3910,7 +3956,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /search/labels"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /search/labels"]["response"];
     };
@@ -3918,7 +3964,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /search/repositories"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /search/repositories"]["response"];
     };
@@ -3926,7 +3972,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /search/topics"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /search/topics"]["response"];
     };
@@ -3934,7 +3980,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /search/users"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /search/users"]["response"];
     };
@@ -3944,7 +3990,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /orgs/:org/teams/:team_slug/memberships/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /orgs/:org/teams/:team_slug/memberships/:username"]["response"];
     };
@@ -3952,15 +3998,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /orgs/:org/teams/:team_slug/projects/:project_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PUT /orgs/:org/teams/:team_slug/projects/:project_id"]["response"];
     };
     addOrUpdateRepoInOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /orgs/:org/teams/:team_slug/repos/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /orgs/:org/teams/:team_slug/repos/:owner/:repo"]["response"];
     };
@@ -3968,7 +4014,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/repos/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/repos/:owner/:repo"]["response"];
     };
@@ -3976,7 +4022,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/teams"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /orgs/:org/teams"]["response"];
     };
@@ -3984,7 +4030,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments"]["response"];
     };
@@ -3992,7 +4038,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /orgs/:org/teams/:team_slug/discussions"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /orgs/:org/teams/:team_slug/discussions"]["response"];
     };
@@ -4000,7 +4046,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"]["response"];
     };
@@ -4008,7 +4054,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/teams/:team_slug/discussions/:discussion_number"]["response"];
     };
@@ -4016,7 +4062,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/teams/:team_slug"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/teams/:team_slug"]["response"];
     };
@@ -4024,7 +4070,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug"]["response"];
     };
@@ -4032,7 +4078,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"]["response"];
     };
@@ -4040,7 +4086,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number"]["response"];
     };
@@ -4048,7 +4094,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/memberships/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/memberships/:username"]["response"];
     };
@@ -4056,7 +4102,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams"]["response"];
     };
@@ -4064,7 +4110,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/teams"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/teams"]["response"];
     };
@@ -4072,7 +4118,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments"]["response"];
     };
@@ -4080,20 +4126,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/discussions"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/discussions"]["response"];
     };
     listForAuthenticatedUser: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /user/teams"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /user/teams"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/teams"]["response"];
     };
     listMembersInOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/members"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/members"]["response"];
     };
@@ -4101,7 +4150,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/invitations"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/invitations"]["response"];
     };
@@ -4109,15 +4158,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/projects"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/projects"]["response"];
     };
     listReposInOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/repos"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/repos"]["response"];
     };
@@ -4125,7 +4174,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/memberships/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/teams/:team_slug/memberships/:username"]["response"];
     };
@@ -4133,7 +4182,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/projects/:project_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/teams/:team_slug/projects/:project_id"]["response"];
     };
@@ -4141,7 +4190,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /orgs/:org/teams/:team_slug/repos/:owner/:repo"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /orgs/:org/teams/:team_slug/repos/:owner/:repo"]["response"];
     };
@@ -4149,15 +4198,15 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /orgs/:org/teams/:team_slug/projects/:project_id"]["parameters"],
-          "baseUrl" | "headers"
-        > & { mediaType: { previews: string[] } };
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /orgs/:org/teams/:team_slug/projects/:project_id"]["response"];
     };
     updateDiscussionCommentInOrg: {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number"]["response"];
     };
@@ -4165,7 +4214,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /orgs/:org/teams/:team_slug/discussions/:discussion_number"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /orgs/:org/teams/:team_slug/discussions/:discussion_number"]["response"];
     };
@@ -4173,7 +4222,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /orgs/:org/teams/:team_slug"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /orgs/:org/teams/:team_slug"]["response"];
     };
@@ -4183,7 +4232,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /user/emails"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /user/emails"]["response"];
     };
@@ -4191,7 +4240,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /user/blocks/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /user/blocks/:username"]["response"];
     };
@@ -4199,7 +4248,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/blocks/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/blocks/:username"]["response"];
     };
@@ -4207,7 +4256,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/following/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/following/:username"]["response"];
     };
@@ -4215,7 +4264,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/following/:target_user"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/following/:target_user"]["response"];
     };
@@ -4223,20 +4272,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["POST /user/gpg_keys"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["POST /user/gpg_keys"]["response"];
     };
     createPublicKey: {
       parameters: RequestParameters &
-        Omit<Endpoints["POST /user/keys"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["POST /user/keys"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["POST /user/keys"]["response"];
     };
     deleteEmails: {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/emails"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /user/emails"]["response"];
     };
@@ -4244,7 +4296,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/gpg_keys/:gpg_key_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /user/gpg_keys/:gpg_key_id"]["response"];
     };
@@ -4252,7 +4304,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/keys/:key_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /user/keys/:key_id"]["response"];
     };
@@ -4260,20 +4312,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PUT /user/following/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PUT /user/following/:username"]["response"];
     };
     getAuthenticated: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /user"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /user"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user"]["response"];
     };
     getByUsername: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username"]["response"];
     };
@@ -4281,7 +4336,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/hovercard"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/hovercard"]["response"];
     };
@@ -4289,7 +4344,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/gpg_keys/:gpg_key_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/gpg_keys/:gpg_key_id"]["response"];
     };
@@ -4297,20 +4352,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/keys/:key_id"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/keys/:key_id"]["response"];
     };
     list: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /users"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /users"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /users"]["response"];
     };
     listBlocked: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/blocks"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/blocks"]["response"];
     };
@@ -4318,7 +4376,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/emails"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/emails"]["response"];
     };
@@ -4326,7 +4384,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/following"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/following"]["response"];
     };
@@ -4334,7 +4392,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/followers"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/followers"]["response"];
     };
@@ -4342,7 +4400,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/followers"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/followers"]["response"];
     };
@@ -4350,7 +4408,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/following"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/following"]["response"];
     };
@@ -4358,7 +4416,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/following"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/following"]["response"];
     };
@@ -4366,7 +4424,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/gpg_keys"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/gpg_keys"]["response"];
     };
@@ -4374,7 +4432,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/gpg_keys"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/gpg_keys"]["response"];
     };
@@ -4382,20 +4440,23 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /user/public_emails"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /user/public_emails"]["response"];
     };
     listPublicKeys: {
       parameters: RequestParameters &
-        Omit<Endpoints["GET /user/keys"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["GET /user/keys"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["GET /user/keys"]["response"];
     };
     listPublicKeysForUser: {
       parameters: RequestParameters &
         Omit<
           Endpoints["GET /users/:username/keys"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["GET /users/:username/keys"]["response"];
     };
@@ -4403,7 +4464,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["PATCH /user/email/visibility"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["PATCH /user/email/visibility"]["response"];
     };
@@ -4411,7 +4472,7 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/blocks/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /user/blocks/:username"]["response"];
     };
@@ -4419,13 +4480,16 @@ export type RestEndpointMethodTypes = {
       parameters: RequestParameters &
         Omit<
           Endpoints["DELETE /user/following/:username"]["parameters"],
-          "baseUrl" | "headers"
+          "baseUrl" | "headers" | "mediaType"
         >;
       response: Endpoints["DELETE /user/following/:username"]["response"];
     };
     updateAuthenticated: {
       parameters: RequestParameters &
-        Omit<Endpoints["PATCH /user"]["parameters"], "baseUrl" | "headers">;
+        Omit<
+          Endpoints["PATCH /user"]["parameters"],
+          "baseUrl" | "headers" | "mediaType"
+        >;
       response: Endpoints["PATCH /user"]["response"];
     };
   };

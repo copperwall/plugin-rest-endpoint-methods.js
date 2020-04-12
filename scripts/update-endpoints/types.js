@@ -46,12 +46,9 @@ async function generateTypes() {
   for (const namespace of namespaces) {
     const namespaceMethods = [];
     for (const method of namespace.methods) {
-      const overrideRequiredPreviews = method.hasRequiredPreviews
-        ? `& { mediaType: { previews: string[] } }`
-        : "";
       namespaceMethods.push(
         `${method.name}: {
-          parameters: RequestParameters & Omit<Endpoints["${method.route}"]["parameters"], "baseUrl" | "headers"> ${overrideRequiredPreviews},
+          parameters: RequestParameters & Omit<Endpoints["${method.route}"]["parameters"], "baseUrl" | "headers" | "mediaType">,
           response: Endpoints["${method.route}"]["response"]
         }`
       );
